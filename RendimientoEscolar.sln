@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RendimientoEscolar.Server", "RendimientoEscolar.Server\RendimientoEscolar.Server.csproj", "{D1D25DEC-CF04-4CAD-BDB4-609BBD1F098D}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "rendimientoescolar.client", "rendimientoescolar.client\rendimientoescolar.client.esproj", "{2C42C559-B869-40A3-9BC3-9CD9C62C06CE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D1D25DEC-CF04-4CAD-BDB4-609BBD1F098D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1D25DEC-CF04-4CAD-BDB4-609BBD1F098D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1D25DEC-CF04-4CAD-BDB4-609BBD1F098D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1D25DEC-CF04-4CAD-BDB4-609BBD1F098D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C42C559-B869-40A3-9BC3-9CD9C62C06CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C42C559-B869-40A3-9BC3-9CD9C62C06CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C42C559-B869-40A3-9BC3-9CD9C62C06CE}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{2C42C559-B869-40A3-9BC3-9CD9C62C06CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C42C559-B869-40A3-9BC3-9CD9C62C06CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C42C559-B869-40A3-9BC3-9CD9C62C06CE}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {48A639A0-C23D-41B5-AC11-0401E7A3006A}
+	EndGlobalSection
+EndGlobal
