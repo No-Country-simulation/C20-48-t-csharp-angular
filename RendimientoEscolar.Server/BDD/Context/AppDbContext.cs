@@ -1,10 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using RendimientoEscolar.Server.Logica.Entidades;
 
-namespace RendimientoEscolar.Server.Context
+namespace RendimientoEscolar.Server.BDD.Context
 {
     public class AppDbContext : DbContext
     {
+        public AppDbContext()
+        {
+        }
+
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
         }
@@ -31,18 +35,16 @@ namespace RendimientoEscolar.Server.Context
             // Configuración de la entidad User
             modelBuilder.Entity<User>(entity =>
             {
-                entity.HasKey(e => e.Id); // Establece la clave primaria
-                entity.Property(e => e.Id).UseIdentityColumn().ValueGeneratedOnAdd(); // Configura la generación automática de IDs
                 entity.Property(e => e.Nombre).HasMaxLength(50); // Configura la longitud máxima de la propiedad Nombre
                 entity.Property(e => e.Password).HasMaxLength(50); // Configura la longitud máxima de la propiedad Password
                 entity.ToTable("Usuario"); // Configura el nombre de la tabla en la base de datos
                 entity.HasData(
-                    new User { Id= 1, Nombre="User1",Password="Pass",Activo=true}
+                    new User { Id = 1, Nombre = "User1", Password = "Pass", Activo = true }
                     );
             });
 
 
-            
+
         }
     }
 }

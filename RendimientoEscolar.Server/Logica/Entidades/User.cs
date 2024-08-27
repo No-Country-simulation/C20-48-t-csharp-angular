@@ -11,9 +11,29 @@ namespace RendimientoEscolar.Server.Logica.Entidades
         [Required]
         public string Password { get; set; }
         [Required]
-        public TipoUsuario tipousuario { get; set; }//Ver esto
-        
+        public TipoUsuario tipousuario { get; set; }
+
         public bool Activo { get; set; }
+
+
+        public void Validar()
+        {
+            ValidarNombre();
+            ValidarPassword();
+        }
+
+
+        public void ValidarNombre() {
+            if (string.IsNullOrEmpty(Nombre))
+                throw new Exception("El nombre no puede ser vacio");
+        }
+
+        public void ValidarPassword()
+        {
+            if (string.IsNullOrEmpty(Password))
+                throw new Exception("El password no puede ser vacio");
+        }
+
 
     }
 
