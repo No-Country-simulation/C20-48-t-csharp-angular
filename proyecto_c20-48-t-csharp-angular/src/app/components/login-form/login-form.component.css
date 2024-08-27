@@ -1,0 +1,128 @@
+h2 {
+  font-family: roboto;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 37.5px;
+  margin-top: 33px;
+  margin-bottom: 33px;
+}
+
+.login {
+  border-radius: 25px;
+  border: 1px solid black;
+  background-color: rgba(53, 78, 143, 0.13);
+  padding: 20px;
+  width: 300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 251px;
+}
+
+
+.input-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+
+.input-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+/* Estilo para los campos de entrada */
+input[type="text"],
+input[type="password"] {
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 20px;
+  font-family: roboto;
+  font-weight: 300;
+  line-height: 23.44px;
+  width: 68px;
+  height: 23px;
+}
+
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(0, 51, 102, 1);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+
+.login--cambio {
+  margin-top: 10px;
+  color: #007bff;
+  cursor: pointer;
+}
+
+
+
+/* Estilo para los campos del formulario */
+.form-group {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+/* Estilo para los campos de entrada */
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+/* Estilo para el botón */
+.btn-primary {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Estilo para el mensaje de error */
+.error-message {
+  color: red;
+  font-size: 14px;
+}
+
+/* Estilo para el enlace de cambio de contraseña */
+.login--cambio {
+  margin-top: 10px;
+  color: #007bff;
+  cursor: pointer;
+}
+
+/* css para movil
+@media (max-width: 1280px) {
+
+
+h2{
+  font-size: 20px;
+}
+
+.login {
+
+  width: 200px;
+
+}
+
+} */
