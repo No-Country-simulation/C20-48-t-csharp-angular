@@ -11,10 +11,13 @@ namespace RendimientoEscolar.Server.Controllers
     {
 
         private IAddUser addUserUC;
+        private IDeleteUser _deleteUserCU;
 
-        public UserController(IAddUser addUserUC)
+        public UserController(IAddUser addUserUC, IDeleteUser deleteUserCU)
         {
             this.addUserUC = addUserUC;
+            this._deleteUserCU = deleteUserCU;
+
         }
 
 
@@ -39,7 +42,27 @@ namespace RendimientoEscolar.Server.Controllers
             }
         }
 
-      
+        [HttpDelete("{id}")]
+        [Autorize(Roles = "Admin")]
+        public IActionResult DeleteUser(int id)
+        {
+            try
+            {
+                deleteUserCU.DeleteUser(id);
+                return Ok();
+            }
+            catch (UserNotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, "Error al eliminar el usuario.");
+            }
+            
+        }
+
+
 
     }
 }
