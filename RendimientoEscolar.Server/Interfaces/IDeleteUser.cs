@@ -4,7 +4,7 @@ namespace RendimientoEscolar.Server.Interfaces
 {
 	public interface IDeleteUser
     {
-        public void DeleteUser(int userId)
+        void DeleteUser(int userId);
 
     }
 }

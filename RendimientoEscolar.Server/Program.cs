@@ -27,6 +27,7 @@ builder.Services.AddScoped<IRepositorioUser, RepositorioUser>();
 
 //inicializacion de casos de uso
 builder.Services.AddScoped<IAddUser, AddUserCU>();
+builder.Services.AddScoped<IDeleteUser, DeleteUserCU>();
 
 var app = builder.Build();
 

@@ -1,7 +1,9 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using RendimientoEscolar.Server.DTOs;
+using RendimientoEscolar.Server.Exceptions;
 using RendimientoEscolar.Server.Interfaces;
+
 
 namespace RendimientoEscolar.Server.Controllers
 {
@@ -10,13 +12,13 @@ namespace RendimientoEscolar.Server.Controllers
     public class UserController : ControllerBase
     {
 
-        private IAddUser addUserUC;
-        private IDeleteUser _deleteUserCU;
+        private readonly IAddUser addUserUC;
+        private readonly IDeleteUser deleteUserCU;
 
         public UserController(IAddUser addUserUC, IDeleteUser deleteUserCU)
         {
             this.addUserUC = addUserUC;
-            this._deleteUserCU = deleteUserCU;
+            this.deleteUserCU = deleteUserCU;
 
         }
 
@@ -43,7 +45,7 @@ namespace RendimientoEscolar.Server.Controllers
         }
 
         [HttpDelete("{id}")]
-        [Autorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         public IActionResult DeleteUser(int id)
         {
             try
@@ -55,14 +57,13 @@ namespace RendimientoEscolar.Server.Controllers
             {
                 return NotFound(ex.Message);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return StatusCode(500, "Error al eliminar el usuario.");
             }
             
         }
 
-
-
+   
     }
 }

@@ -4,9 +4,9 @@
     {
 
         IEnumerable<T> FindAll();
-        T FindByID(int id);
+        T FindByID(int UserId);
         void Add(T unDato);
-        void Remove(int id);
         void Update(T dato);
+        void Delete(int userId);
     }
 }

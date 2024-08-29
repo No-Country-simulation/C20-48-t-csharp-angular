@@ -1,6 +1,5 @@
-﻿using RendimientoEscolar.Server.DTOs;
+﻿using RendimientoEscolar.Server.Exceptions;
 using RendimientoEscolar.Server.Interfaces;
-using RendimientoEscolar.Server.Logica.Entidades;
 using RendimientoEscolar.Server.Logica.Interfaces_Repositorios;
 
 public class DeleteUserCU : IDeleteUser
