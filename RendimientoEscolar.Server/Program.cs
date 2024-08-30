@@ -3,8 +3,9 @@ using RendimientoEscolar.Server.BDD.Context;
 using RendimientoEscolar.Server.BDD.Repositorios;
 using RendimientoEscolar.Server.Casos_de_uso;
 using RendimientoEscolar.Server.Interfaces;
-using RendimientoEscolar.Server.Logica.Entidades;
 using RendimientoEscolar.Server.Logica.Interfaces_Repositorios;
+using RendimientoEscolar.Server.Services;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,6 +27,7 @@ builder.Services.AddScoped<IRepositorioUser, RepositorioUser>();
 
 
 //inicializacion de casos de uso
+builder.Services.AddScoped<AuthenticationService>();
 builder.Services.AddScoped<IAddUser, AddUserCU>();
 builder.Services.AddScoped<IDeleteUser, DeleteUserCU>();
 

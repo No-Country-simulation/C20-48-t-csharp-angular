@@ -1,4 +1,5 @@
-﻿using RendimientoEscolar.Server.BDD.Context;
+﻿using Microsoft.EntityFrameworkCore;
+using RendimientoEscolar.Server.BDD.Context;
 using RendimientoEscolar.Server.Exceptions;
 using RendimientoEscolar.Server.Logica.Entidades;
 using RendimientoEscolar.Server.Logica.Interfaces_Repositorios;
@@ -14,6 +15,15 @@ namespace RendimientoEscolar.Server.BDD.Repositorios
         public RepositorioUser(AppDbContext context) 
         { 
             _context = new AppDbContext();
+        }
+        public async Task<User> GetByUsernameAsync(string username)
+        {
+            if (string.IsNullOrWhiteSpace(username))
+            {
+                throw new ArgumentException("El nombre de usuario no puede ser nulo o vacío.", nameof(username));
+            }
+
+            return await _context.Users.SingleOrDefaultAsync(u => u.Nombre == username);
         }
 
         public User GetById(int userId)
@@ -80,10 +90,10 @@ namespace RendimientoEscolar.Server.BDD.Repositorios
                 throw new Exception("Ocurrió un error al eliminar el usuario: " + ex.Message, ex);
             }
         }
-        
         public User FindByID(int id)
         {
             return _context.Users.Find(id);
         }
+
     }
 }
