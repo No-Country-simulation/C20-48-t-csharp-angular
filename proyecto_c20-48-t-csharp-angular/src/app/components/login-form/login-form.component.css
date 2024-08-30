@@ -8,8 +8,7 @@ h2 {
 }
 
 .login {
-  border-radius: 25px;
-  border: 1px solid black;
+  border-radius: 50px;
   background-color: rgba(53, 78, 143, 0.13);
   padding: 20px;
   width: 300px;
@@ -17,9 +16,8 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 251px;
+  margin-top: 150px;
 }
-
 
 .input-container {
   display: flex;
@@ -28,19 +26,17 @@ h2 {
   width: 100%;
 }
 
-
 .input-icon {
   width: 20px;
   height: 20px;
   margin-right: 10px;
 }
 
-/* Estilo para los campos de entrada */
 input[type="text"],
 input[type="password"] {
   flex: 1;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 50px;
   border: 1px solid #ccc;
   font-size: 20px;
   font-family: roboto;
@@ -50,11 +46,10 @@ input[type="password"] {
   height: 23px;
 }
 
-
 button {
   padding: 10px 20px;
   border: none;
-  border-radius: 5px;
+  border-radius: 50px;
   background-color: rgba(0, 51, 102, 1);
   color: white;
   font-size: 16px;
@@ -62,22 +57,17 @@ button {
   margin-top: 10px;
 }
 
-
 .login--cambio {
   margin-top: 10px;
   color: #007bff;
   cursor: pointer;
 }
 
-
-
-/* Estilo para los campos del formulario */
-.form-group {
+form-group {
   width: 100%;
   margin-bottom: 15px;
 }
 
-/* Estilo para los campos de entrada */
 .form-control {
   width: 100%;
   padding: 10px;
@@ -86,25 +76,30 @@ button {
   font-size: 16px;
 }
 
-/* Estilo para el botón */
 .btn-primary {
-  padding: 10px 20px;
+  padding: 6px 106px;
   border: none;
-  border-radius: 5px;
+  border-radius: 50px;
   background-color: #007bff;
   color: white;
-  font-size: 16px;
   cursor: pointer;
   margin-top: 10px;
+  width: 270px;
+  height:38px;
+  font-size: 20px;
+  text-align: center;
+  display: inline-block;
 }
 
-/* Estilo para el mensaje de error */
+input[type="checkbox" i] {
+  margin-left: 35px;
+}
+
 .error-message {
   color: red;
   font-size: 14px;
 }
 
-/* Estilo para el enlace de cambio de contraseña */
 .login--cambio {
   margin-top: 10px;
   color: #007bff;
@@ -112,6 +107,7 @@ button {
 }
 
 /* css para movil
+
 @media (max-width: 1280px) {
 
 
