@@ -7,12 +7,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { HeaderComponent } from './components/header/header.component';
+import { AlumnoComponent } from './pages/alumno/alumno.component';
+import { MenuComponent } from './components/menu/menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginFormComponent,
-    FooterComponent
+    FooterComponent,
+    HeaderComponent,
+    AlumnoComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,

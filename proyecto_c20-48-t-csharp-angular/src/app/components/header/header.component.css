@@ -1,0 +1,19 @@
+nav { 
+    height: 76px;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items: flex-end;
+    top: 0;
+    left: 0;
+    background: #003366;
+    z-index: 2;
+}
+
+h1{
+    color: #fff;
+    font-size: xx-large;
+    font-weight: 300px;
+    margin-left: 64rem;
+    margin-bottom: 20px;
+}
