@@ -1,0 +1,38 @@
+/* aside.component.css */
+.admin-sidebar {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+  width: 250px; /* Ajusta el ancho según sea necesario */
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+  position: fixed; /* Fija el sidebar a la izquierda */
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+button:hover {
+  background-color: #0056b3;
+}

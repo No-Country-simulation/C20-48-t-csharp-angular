@@ -7,12 +7,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { AdministradorComponent } from './adm/administrador/administrador.component';
+import { SidebarComponent } from './adm/sidebar/sidebar.component';
+import { VirtualComputersComponent } from './pages/virtual-computers/virtual-computers.component';
+import { GestionUsuarioComponent } from './pages/gestion-usuario/gestion-usuario.component';
+import { AddEducationalNotificationComponent } from './pages/add-educational-notification/add-educational-notification.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginFormComponent,
-    FooterComponent
+    FooterComponent,
+    AdministradorComponent,
+    SidebarComponent,
+    VirtualComputersComponent,
+    GestionUsuarioComponent,
+    AddEducationalNotificationComponent
   ],
   imports: [
     BrowserModule,
