@@ -1,8 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using RendimientoEscolar.Server.DTOs;
 using RendimientoEscolar.Server.Interfaces;
-
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace RendimientoEscolar.Server.Controllers
 {
@@ -11,26 +10,21 @@ namespace RendimientoEscolar.Server.Controllers
     public class TipoUsuarioController : ControllerBase
     {
 
-        private IAddTipoUsuario addTipoUC;
+
         private IObtenerTiposUsuario obtenerTiposUsuarioUC;
+        private IAddTipoUsuario addTipoUsuarioUC;
 
-
-        public TipoUsuarioController(IAddTipoUsuario addTipoUC, IObtenerTiposUsuario obtenerTiposUsuarioUC)
+        public TipoUsuarioController(IObtenerTiposUsuario obtenerTiposUsuarioUC, IAddTipoUsuario addTipoUsuarioUC)
         {
-            this.addTipoUC = addTipoUC;
             this.obtenerTiposUsuarioUC = obtenerTiposUsuarioUC;
+            this.addTipoUsuarioUC = addTipoUsuarioUC;
         }
 
-        /// <summary>
-        /// Obtiene todas las amenazas
-        /// </summary>
-        /// <returns></returns>
+
         [HttpGet(Name = "GetTipoUsuario")]
         [ProducesResponseType(typeof(IEnumerable<TipoUsuarioDTO>), 200)]
         [ProducesResponseType(typeof(string), 400)]
         [ProducesResponseType(500)]
-
-        [HttpGet]
         public IActionResult GetAll()
         {
             try
@@ -45,53 +39,38 @@ namespace RendimientoEscolar.Server.Controllers
                 return BadRequest("Ocurrio un error al obtener los tipos de usuario: " + ex.Message);
             }
 
-      
+
         }
-
-        /*
-        // GET api/<TipoUsuario>/5
-        [HttpGet("{id}")]
-        public IActionResult GetById(int id)
-        {
-
-            try
-            {
-
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-         
-        }
-        */
 
         /// <summary>
-        /// Registrar un usuario
+        /// Registrar un TipoUsuario
         /// </summary>
-        /// <param name="tipoUsuario">Objeto de tipo TipoUsuarioDTO</param>
+        /// <param name="tipo">Objeto de tipo TipoUsuarioDTO</param>
         /// <returns></returns>
         [HttpPost()]
-        [ProducesResponseType(typeof(UserDto), 200)]
+        [ProducesResponseType(typeof(TipoUsuarioDTO), 200)]
         [ProducesResponseType(typeof(string), 400)]
         [ProducesResponseType(500)]
-        [HttpPost]
-        public IActionResult Post([FromBody] TipoUsuarioDTO tipoUsuario)
-        {
+        public IActionResult Post([FromBody] TipoUsuarioDTO tipo) {
 
             try
             {
-                this.addTipoUC.AddTipoUsuario(tipoUsuario);
-                return Ok("Se registro correctamente el tipo de usuario");
+
+                if (tipo == null)
+                {
+                    return BadRequest("Debe ingresar todos los datos");
+                }
+
+                this.addTipoUsuarioUC.AddTipoUsuario(tipo);
+                return Created("api/TipoUsuario", tipo);
 
             }
             catch (Exception ex)
             {
-                return BadRequest("Ocurrio un error al registrar el tipo de usuario: " + ex.Message);
 
+                return BadRequest("Ocurrio un error al agregar el tipo de usuario: " + ex.Message);
             }
+            
         }
-
     }
 }

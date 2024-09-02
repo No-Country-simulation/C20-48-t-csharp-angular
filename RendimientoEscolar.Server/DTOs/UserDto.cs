@@ -12,8 +12,11 @@ namespace RendimientoEscolar.Server.DTOs
 
         public bool Activo { get; set; }
 
+        public UserDto()
+        {
+            
+        }
 
-  
 
         public UserDto(User u) {
 
@@ -21,7 +24,10 @@ namespace RendimientoEscolar.Server.DTOs
             this.Id = u.Id;
             this.Activo = u.Activo;
             this.Password = u.Password;
-            this.TipoUsuarioId = (int)u.TipoUsuarioId;
+            if(u.TipoUsuario != null)
+            {
+                this.TipoUsuarioId = u.TipoUsuario.TipoUsuarioId;
+            }
 
         }
         

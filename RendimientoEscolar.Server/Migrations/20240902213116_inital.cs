@@ -11,7 +11,7 @@ namespace RendimientoEscolar.Server.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "TipoUsuario",
+                name: "TipoUsuarios",
                 columns: table => new
                 {
                     TipoUsuarioId = table.Column<int>(type: "int", nullable: false)
@@ -20,7 +20,7 @@ namespace RendimientoEscolar.Server.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_TipoUsuario", x => x.TipoUsuarioId);
+                    table.PrimaryKey("PK_TipoUsuarios", x => x.TipoUsuarioId);
                 });
 
             migrationBuilder.CreateTable(
@@ -38,9 +38,9 @@ namespace RendimientoEscolar.Server.Migrations
                 {
                     table.PrimaryKey("PK_Usuario", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Usuario_TipoUsuario_TipoUsuarioId",
+                        name: "FK_Usuario_TipoUsuarios_TipoUsuarioId",
                         column: x => x.TipoUsuarioId,
-                        principalTable: "TipoUsuario",
+                        principalTable: "TipoUsuarios",
                         principalColumn: "TipoUsuarioId");
                 });
 
@@ -50,8 +50,8 @@ namespace RendimientoEscolar.Server.Migrations
                 values: new object[] { 1, true, "User1", "Pass", null });
 
             migrationBuilder.CreateIndex(
-                name: "IX_TipoUsuario_Nombre",
-                table: "TipoUsuario",
+                name: "IX_TipoUsuarios_Nombre",
+                table: "TipoUsuarios",
                 column: "Nombre",
                 unique: true);
 
@@ -68,7 +68,7 @@ namespace RendimientoEscolar.Server.Migrations
                 name: "Usuario");
 
             migrationBuilder.DropTable(
-                name: "TipoUsuario");
+                name: "TipoUsuarios");
         }
     }
 }

@@ -12,7 +12,7 @@ using RendimientoEscolar.Server.BDD.Context;
 namespace RendimientoEscolar.Server.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240902203137_inital")]
+    [Migration("20240902213116_inital")]
     partial class inital
     {
         /// <inheritdoc />
@@ -42,7 +42,7 @@ namespace RendimientoEscolar.Server.Migrations
                     b.HasIndex("Nombre")
                         .IsUnique();
 
-                    b.ToTable("TipoUsuario");
+                    b.ToTable("TipoUsuarios");
                 });
 
             modelBuilder.Entity("RendimientoEscolar.Server.Logica.Entidades.User", b =>

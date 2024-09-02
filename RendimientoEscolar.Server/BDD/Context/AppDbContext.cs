@@ -40,7 +40,7 @@ namespace RendimientoEscolar.Server.BDD.Context
                 entity.Property(e => e.Password).HasMaxLength(50); // Configura la longitud máxima de la propiedad Password
                 entity.ToTable("Usuario"); // Configura el nombre de la tabla en la base de datos
                 entity.HasData(
-                    new User { Id = 1, Nombre = "User1", Password = "Pass", Activo = true }
+                    new User { Id = 1, Nombre = "User1", Password = "Pass", Activo = true, TipoUsuario=null }
                     );
             });
 

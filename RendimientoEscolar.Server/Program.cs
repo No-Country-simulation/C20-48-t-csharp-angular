@@ -23,12 +23,15 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 //inicializacion de repositorios
 
 builder.Services.AddScoped<IRepositorioUser, RepositorioUser>();
+builder.Services.AddScoped<IRepositorioTipoUsuario, RepositorioTipoUsuario>();
 
 
 
 //inicializacion de casos de uso
 builder.Services.AddScoped<IAddUser, AddUserCU>();
 builder.Services.AddScoped<IObtenerUsuarioPorCredenciales, ObtenerUsuarioPorCredencialesCU>();
+builder.Services.AddScoped<IObtenerTiposUsuario, ObtenerTiposUsuarioCU>();
+builder.Services.AddScoped<IAddTipoUsuario, AddTipoUsuarioCU>();
 
 
 var app = builder.Build();

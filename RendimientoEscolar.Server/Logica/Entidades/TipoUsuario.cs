@@ -18,9 +18,13 @@ namespace RendimientoEscolar.Server.Logica.Entidades
             Nombre = nombre;
         }
 
-        internal void Validar()
+        public void Validar()
         {
-            throw new NotImplementedException();
+            if (string.IsNullOrWhiteSpace(Nombre))
+            {
+                throw new Exception("El nombre del tipo de usuario no puede estar vacio");
+            }
+
         }
     }
 }

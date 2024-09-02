@@ -19,7 +19,7 @@ namespace RendimientoEscolar.Server.BDD.Repositorios
         {
             try
             {
-                unDato.Validar();//TODO
+                unDato.Validar();
                 _context.TipoUsuarios.Add(unDato);
                 _context.SaveChanges();
 
@@ -33,7 +33,16 @@ namespace RendimientoEscolar.Server.BDD.Repositorios
 
         public IEnumerable<TipoUsuario> FindAll()
         {
-            throw new NotImplementedException();
+            try
+            {
+
+                return _context.TipoUsuarios.ToList();
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Error al obtener los tipos de usuario: " + ex);
+            }
         }
 
         public TipoUsuario FindByID(int id)

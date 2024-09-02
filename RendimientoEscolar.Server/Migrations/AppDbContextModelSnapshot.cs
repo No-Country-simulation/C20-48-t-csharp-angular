@@ -39,7 +39,7 @@ namespace RendimientoEscolar.Server.Migrations
                     b.HasIndex("Nombre")
                         .IsUnique();
 
-                    b.ToTable("TipoUsuario");
+                    b.ToTable("TipoUsuarios");
                 });
 
             modelBuilder.Entity("RendimientoEscolar.Server.Logica.Entidades.User", b =>
