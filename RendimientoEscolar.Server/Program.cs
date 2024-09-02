@@ -25,8 +25,11 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddScoped<IRepositorioUser, RepositorioUser>();
 
 
+
 //inicializacion de casos de uso
 builder.Services.AddScoped<IAddUser, AddUserCU>();
+builder.Services.AddScoped<IObtenerUsuarioPorCredenciales, ObtenerUsuarioPorCredencialesCU>();
+
 
 var app = builder.Build();
 
@@ -39,6 +42,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 

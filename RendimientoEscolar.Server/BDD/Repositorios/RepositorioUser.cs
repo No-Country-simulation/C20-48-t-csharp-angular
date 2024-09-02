@@ -29,6 +29,22 @@ namespace RendimientoEscolar.Server.BDD.Repositorios
             }
         }
 
+
+        public User FindUserByCredentials(string name, string password)
+        {
+            try
+            {
+                return _context.Users.Where(u => u.Nombre == name && u.Password == password).FirstOrDefault();
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Error al buscar el usuario: " + ex);
+            }
+
+        }
+
+
         public IEnumerable<User> FindAll()
         {
             throw new NotImplementedException();

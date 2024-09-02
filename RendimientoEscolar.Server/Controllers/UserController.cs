@@ -11,16 +11,19 @@ namespace RendimientoEscolar.Server.Controllers
     {
 
         private IAddUser addUserUC;
-        private IDeleteUser _deleteUserCU;
+        private IObtenerUsuarioPorCredenciales obtenerUsuarioPorCredencialesCU;
 
-        public UserController(IAddUser addUserUC, IDeleteUser deleteUserCU)
+        public UserController(IAddUser addUserUC, IObtenerUsuarioPorCredenciales obtenerUsuarioPorCredencialesCU)
         {
             this.addUserUC = addUserUC;
-            this._deleteUserCU = deleteUserCU;
-
+            this.obtenerUsuarioPorCredencialesCU = obtenerUsuarioPorCredencialesCU;
         }
 
-
+        /// <summary>
+        /// Registrar un usuario
+        /// </summary>
+        /// <param name="user">Objeto de tipo UsuarioDto</param>
+        /// <returns></returns>
         [HttpPost()]
         [ProducesResponseType(typeof(UserDto), 200)]
         [ProducesResponseType(typeof(string), 400)]
@@ -42,25 +45,28 @@ namespace RendimientoEscolar.Server.Controllers
             }
         }
 
-        [HttpDelete("{id}")]
-        [Autorize(Roles = "Admin")]
-        public IActionResult DeleteUser(int id)
+        //Login
+        [HttpGet("{nombre}/{contrasenia}")]
+        [ProducesResponseType(typeof(UserDto), 200)]
+        [ProducesResponseType(typeof(string), 400)]
+        [ProducesResponseType(500)]
+        public IActionResult Get(string nombre, string contrasenia)
         {
             try
             {
-                deleteUserCU.DeleteUser(id);
-                return Ok();
-            }
-            catch (UserNotFoundException ex)
-            {
-                return NotFound(ex.Message);
+                UserDto userDto = this.obtenerUsuarioPorCredencialesCU.ObtenerUsuarioPorCredenciales(nombre, contrasenia);
+                if (userDto == null)
+                {
+                    return NotFound("Usuario no encontrado");
+                }
+                return Ok(userDto);
             }
             catch (Exception ex)
             {
-                return StatusCode(500, "Error al eliminar el usuario.");
+                return BadRequest("Ocurrio un error al buscar el usuario: " + ex.Message);
             }
-            
         }
+
 
 
 

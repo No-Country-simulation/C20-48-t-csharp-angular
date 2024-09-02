@@ -13,7 +13,8 @@ namespace RendimientoEscolar.Server.BDD.Context
         {
         }
 
-        public DbSet<User> Users { get; set; } // Nota: Convención de nombre en PascalCase
+        public DbSet<User> Users { get; set; } 
+        public DbSet<TipoUsuario> TipoUsuarios { get; set; } 
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

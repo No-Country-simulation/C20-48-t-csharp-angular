@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace RendimientoEscolar.Server.Logica.Entidades
 {
@@ -10,8 +11,8 @@ namespace RendimientoEscolar.Server.Logica.Entidades
         public string Nombre { get; set; }
         [Required]
         public string Password { get; set; }
-        [Required]
-        public TipoUsuario tipousuario { get; set; }
+        [ForeignKey(nameof(TipoUsuario))] public int? TipoUsuarioId { get; set; }
+        public TipoUsuario? TipoUsuario { get; set; }
 
         public bool Activo { get; set; }
 
@@ -37,6 +38,7 @@ namespace RendimientoEscolar.Server.Logica.Entidades
 
     }
 
+    /*
     public enum TipoUsuario
     {
         Alumno,
@@ -44,5 +46,6 @@ namespace RendimientoEscolar.Server.Logica.Entidades
         Admin,
         Tutor
     }
+    */
 
 }

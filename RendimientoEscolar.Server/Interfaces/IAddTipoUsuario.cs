@@ -2,9 +2,9 @@
 
 namespace RendimientoEscolar.Server.Interfaces
 {
-	public interface IDeleteUser
+    public interface IAddTipoUsuario
     {
-        public void DeleteUser(int userId)
 
+        public void AddTipoUsuario(TipoUsuarioDTO tipoUsuario);
     }
 }
