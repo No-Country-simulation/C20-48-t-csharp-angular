@@ -1,0 +1,65 @@
+.perfil{
+    width: 161px;
+    height: 140px;
+    margin-top: 75px;
+    position: fixed;
+    flex-direction: column;
+    gap: .5rem;
+    top: 0;
+    left: 0;
+    background-color: #003366;
+    z-index: 4;
+}
+
+.foto-perfil{
+    position: absolute;
+    margin-left: 35px;
+    margin-top: 10px;
+}
+
+.foto-perfil img{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin-top: 7px;
+}
+
+.menu {
+    margin-top: 215px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 100%;
+    gap: .5rem;
+    top: 0;
+    left: 0;
+    background-color: #CAC4D0;
+    z-index: 3;
+}
+
+.boton-menu {
+    background-color: transparent;
+    border: 0;
+    color: #003366;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    top: 0;
+    left: 0;
+    font-weight: 600;
+    padding: 1rem;
+    font-size: .85rem;
+    width: 100%;
+}
+
+.boton-menu:hover {
+    background-color: #0080ff;
+    color: #fff;
+    width: 100%;
+    position: relative;
+}
+
+ul{
+    list-style-type: none;
+}
