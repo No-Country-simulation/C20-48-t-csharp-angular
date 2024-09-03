@@ -12,6 +12,9 @@ import { SidebarComponent } from './adm/sidebar/sidebar.component';
 import { VirtualComputersComponent } from './pages/virtual-computers/virtual-computers.component';
 import { GestionUsuarioComponent } from './pages/gestion-usuario/gestion-usuario.component';
 import { AddEducationalNotificationComponent } from './pages/add-educational-notification/add-educational-notification.component';
+import { HeaderComponent } from './components/header/header.component';
+import { AlumnoComponent } from './pages/alumno/alumno.component';
+import { MenuComponent } from './components/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { AddEducationalNotificationComponent } from './pages/add-educational-not
     SidebarComponent,
     VirtualComputersComponent,
     GestionUsuarioComponent,
-    AddEducationalNotificationComponent
+    AddEducationalNotificationComponent,
+    HeaderComponent,
+    AlumnoComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
