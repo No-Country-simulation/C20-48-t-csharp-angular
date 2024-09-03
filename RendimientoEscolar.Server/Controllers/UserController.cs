@@ -20,10 +20,13 @@ namespace RendimientoEscolar.Server.Controllers
         }
 
         /// <summary>
-        /// Registrar un usuario
+        /// Registra un nuevo usuario en el sistema.
         /// </summary>
-        /// <param name="user">Objeto de tipo UsuarioDto</param>
-        /// <returns></returns>
+        /// <param name="user">Objeto de tipo <see cref="UserDto"/> que contiene los datos del usuario a registrar.</param>
+        /// <returns>Un objeto <see cref="UserDto"/> con la información del usuario registrado.</returns>
+        /// <response code="201">Usuario registrado exitosamente.</response>
+        /// <response code="400">Solicitud incorrecta. Puede deberse a datos incompletos o inválidos.</response>
+        /// <response code="500">Error interno del servidor al procesar la solicitud.</response>
         [HttpPost()]
         [ProducesResponseType(typeof(UserDto), 200)]
         [ProducesResponseType(typeof(string), 400)]
@@ -45,7 +48,16 @@ namespace RendimientoEscolar.Server.Controllers
             }
         }
 
-        //Login
+        /// <summary>
+        /// Obtiene un usuario basado en sus credenciales.
+        /// </summary>
+        /// <param name="nombre">Nombre de usuario.</param>
+        /// <param name="contrasenia">Contraseña del usuario.</param>
+        /// <returns>Un objeto <see cref="UserDto"/> con la información del usuario si las credenciales son válidas.</returns>
+        /// <response code="200">Usuario encontrado y retornado exitosamente.</response>
+        /// <response code="400">Solicitud incorrecta. Puede deberse a datos inválidos.</response>
+        /// <response code="404">Usuario no encontrado con las credenciales proporcionadas.</response>
+        /// <response code="500">Error interno del servidor al procesar la solicitud.</response>
         [HttpGet("{nombre}/{contrasenia}")]
         [ProducesResponseType(typeof(UserDto), 200)]
         [ProducesResponseType(typeof(string), 400)]

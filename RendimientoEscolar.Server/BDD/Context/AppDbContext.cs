@@ -13,13 +13,13 @@ namespace RendimientoEscolar.Server.BDD.Context
         {
         }
 
-        public DbSet<User> Users { get; set; } 
-        public DbSet<TipoUsuario> TipoUsuarios { get; set; } 
+        public DbSet<User> Users { get; set; }
+        public DbSet<TipoUsuario> TipoUsuarios { get; set; }
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-
+            /*
             string cadenaConexion =
                 @"SERVER=localhost;
                 DATABASE=RendimientoEscolar-v1;
@@ -27,6 +27,18 @@ namespace RendimientoEscolar.Server.BDD.Context
                 ENCRYPT=False";
             optionsBuilder.UseSqlServer(cadenaConexion)
             .EnableDetailedErrors();
+            */
+
+
+            var configuration = new ConfigurationBuilder()
+        .SetBasePath(Directory.GetCurrentDirectory())
+        .AddJsonFile("appsettings.json")
+        .Build();
+
+            var cadenaConexion = configuration.GetConnectionString("CadenaSQL");
+            optionsBuilder.UseSqlServer(cadenaConexion)
+                          .EnableDetailedErrors();
+
         }
 
 
@@ -40,7 +52,7 @@ namespace RendimientoEscolar.Server.BDD.Context
                 entity.Property(e => e.Password).HasMaxLength(50); // Configura la longitud máxima de la propiedad Password
                 entity.ToTable("Usuario"); // Configura el nombre de la tabla en la base de datos
                 entity.HasData(
-                    new User { Id = 1, Nombre = "User1", Password = "Pass", Activo = true, TipoUsuario=null }
+                    new User { Id = 1, Nombre = "User1", Password = "Pass", Activo = true, TipoUsuario = null }
                     );
             });
 
