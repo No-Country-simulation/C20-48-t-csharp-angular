@@ -1,0 +1,169 @@
+.main{
+    width: 1050px;
+    margin: auto;
+    margin-top: 90px;
+    justify-content: center;
+}
+
+.main article{
+    text-align: center;
+}
+
+article{
+    width: 100%;
+    padding-bottom: 4px;
+    margin-bottom: 80px;
+    margin-left: 100px;
+    box-shadow: -10px 0 25px -10px #000000;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.title{
+    width: 200px;
+    height: 42px;
+    font-size: 25px;
+    color: #003366;
+    margin-top: 2px;
+    margin-left: 100px;
+    font-weight: 100;
+}
+
+.search-form {
+	position: relative;
+	display: flex;
+	align-items: center;
+    margin-left: 100px;
+    margin-bottom: 30px;
+	border: 2px solid #fff;
+    border-radius: 5px;
+	background-color: #fff;
+	height: 32px;
+    width: 290px;
+	overflow: hidden;
+}
+
+.search-form input {
+	outline: none;
+	font-family: inherit;
+	border: none;
+    height: 32px;
+	width: 290px;
+	font-size: 1.4rem;
+	padding: 0 2rem;
+	color: #555555;
+    background-color: #CAC4D0;
+	cursor: pointer;
+}
+
+.container-materias{
+    height: 632px;
+    width: 100%;
+    max-width: 1400px;
+    top: 374px;
+    left: 161px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+.container-materias .card{
+    width: 220px;
+    height: 160px;
+    border-radius: 12px;
+    box-shadow: 0 5px 5px #CAC4D0;
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+    background-color: #E3E3E3;
+    ;
+}
+
+.container-materias .card:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px #676767;
+}
+
+.container-materias .card .materia{
+    width: 210px;
+    height: 120px;
+    background-color: #0080ff;
+    border-radius: 10px;
+    margin: 5px;
+    text-align: center;
+}
+
+.container-materias .card .materia h1{
+    font-weight: 600;
+    padding-top: 50px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.container-materias .card h4{
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.container-materias .card p{
+    padding: 0 1rem;
+    padding-top: 5px;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.menu-plataforma{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.boton-menu {
+    background-color: transparent;
+    border: 0;
+    color: #003366;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 600;
+    padding: 1.25rem;
+    font-size: 1.45rem;
+    width: 100%;
+}
+
+.boton-menu.active {
+    background-color: #003366;
+    color: #fff;
+    width: 100%;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    position: relative;
+}
+
+.boton-menu.active::before {
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 2rem;
+    bottom: 100%;
+    right: 0;
+    background-color: transparent;
+    border-bottom-right-radius: .5rem;
+    box-shadow: 0 1rem 0 #003366;
+}
+
+.boton-menu.active::after {
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 2rem;
+    top: 100%;
+    right: 0;
+    background-color: transparent;
+    border-top-right-radius: .5rem;
+    box-shadow: 0 -1rem 0 #003366;
+}
