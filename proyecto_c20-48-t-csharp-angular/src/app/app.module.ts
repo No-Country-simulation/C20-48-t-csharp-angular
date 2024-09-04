@@ -6,13 +6,15 @@ import { LoginService } from './components/login/login.service';// Importa el Ht
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
-import { ProfesorComponent } from './profesor/profesor.component';
+import { AlumnoComponent } from './pages/alumno/alumno.component';
+import { MenuComponent } from './components/menu/menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginFormComponent,
-    ProfesorComponent
+    AlumnoComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
