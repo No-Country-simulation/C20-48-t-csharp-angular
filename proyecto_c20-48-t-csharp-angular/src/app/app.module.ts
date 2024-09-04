@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { AlumnoComponent } from './pages/alumno/alumno.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { ProfesorComponent } from './pages/profesor/profesor.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginFormComponent,
     AlumnoComponent,
-    MenuComponent
+    MenuComponent,
+    ProfesorComponent
   ],
   imports: [
     BrowserModule,
