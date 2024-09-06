@@ -1,0 +1,13 @@
+<p>recuperar-correo works!</p>
+<h1>Recupera tu cuenta</h1>
+<p>Introduce tu correo electrónico para buscar tu cuenta</p>
+
+<mat-form-field appearance="fill">
+  <mat-label>Correo electrónico</mat-label>
+  <input matInput placeholder="Correo electrónico" [(ngModel)]="email">
+</mat-form-field>
+
+<div class="button-group">
+  <button mat-button (click)="onCancel()">Cancelar</button>
+  <button mat-button color="primary" (click)="onSearch()">Buscar</button>
+</div>

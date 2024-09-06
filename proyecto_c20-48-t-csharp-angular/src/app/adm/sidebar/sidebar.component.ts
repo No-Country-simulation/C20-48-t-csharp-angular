@@ -6,15 +6,42 @@ import { Router } from '@angular/router';
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.css']
 })
-export class SidebarComponent implements OnInit {
+export class SidebarComponent {
+  currentView: string = 'default'; // Controla qué vista mostrar
+
 
   constructor(private router: Router) { }
 
-  navigateTo(route: string): void {
-    this.router.navigate([route]);
-  }
+
 
   ngOnInit(): void {
   }
+
+
+
+  // Datos de ejemplo para la gestión de usuarios
+  usuarios = [
+    { nombre: 'Juan Pérez', correo: 'juan.perez@example.com', tipo: 'Profesor' },
+    { nombre: 'Ana Gómez', correo: 'ana.gomez@example.com', tipo: 'Administrador' }
+  ];
+
+  displayedColumns: string[] = ['nombre', 'correo', 'tipo', 'actions'];
+
+  navigateTo(view: string): void {
+    this.currentView = view;
+
+
+  }
+
+  modifyUser(user: any) {
+    // Lógica para modificar el usuario
+    console.log('Modificar usuario', user);
+  }
+
+  deleteUser(user: any) {
+    // Lógica para eliminar el usuario
+    console.log('Eliminar usuario', user);
+  }
+
 
 }

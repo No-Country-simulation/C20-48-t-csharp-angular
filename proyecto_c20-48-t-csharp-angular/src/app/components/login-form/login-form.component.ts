@@ -1,6 +1,9 @@
 import { Component} from '@angular/core';
 import { LoginService } from '../login/login.service';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
+import { RecuperarCorreoComponent } from './../../recuperar-correo/recuperar-correo.component';
 
 @Component({
   selector: 'app-login-form',
@@ -12,7 +15,13 @@ export class LoginFormComponent{
   password: string = '';
   rememberMe: boolean = false;
 
-  constructor(private loginService: LoginService) { }
+  constructor(private loginService: LoginService,
+    private router: Router,
+    public dialog: MatDialog
+  ) { }
+
+
+
 
   // onLogin(): Verifica que los campos no estén vacíos y llama al servicio para enviar los datos. Maneja la respuesta y el error del servicio.
 
@@ -30,5 +39,23 @@ export class LoginFormComponent{
           // Maneja el error del login, muestra un mensaje al usuario si es necesario
         }
       );
+
     }
+
+
+    navigateTo(route: string): void {
+      this.router.navigate([route]);
+    }
+
+
+
+     openRecuperarCorreo(): void {
+    this.dialog.open(RecuperarCorreoComponent, {
+      width: '300px',
+    });
+
   }
+
+
+
+}
