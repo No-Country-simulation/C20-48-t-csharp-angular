@@ -22,6 +22,11 @@ const routes: Routes = [
   { path: 'registro', component: RegistroComponent },
   {path: 'recuperar-correo', component: RecuperarCorreoComponent}
 
+  // { path: 'administrador', loadChildren: () => import('./pedidos/pedidos.module').then(m => m.PedidosModule), canActivate: [AuthGuard] }, // Proteger la ruta de pedidos
+  // // { path: 'menu', loadChildren: () => import('./cocina/cocina.module').then(m => m.CocinaModule), canActivate: [AuthGuard]  }, // Proteger la ruta de cocina
+  // // { path: 'profesor', loadChildren: () => import('./cocina/cocina.module').then(m => m.CocinaModule), canActivate: [AuthGuard]  }, // Proteger la ruta de cocina
+  // { path: '**', redirectTo: '', pathMatch: 'full' }
+
 ];
 
 @NgModule({

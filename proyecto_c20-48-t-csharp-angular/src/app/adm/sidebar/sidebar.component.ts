@@ -33,6 +33,8 @@ export class SidebarComponent {
 
   }
 
+
+
   modifyUser(user: any) {
     // Lógica para modificar el usuario
     console.log('Modificar usuario', user);

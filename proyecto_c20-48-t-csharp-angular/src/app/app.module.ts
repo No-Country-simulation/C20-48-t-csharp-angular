@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms'; // importar
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // importar
 import { HttpClientModule } from '@angular/common/http'; // Importa el HttpClientModule
 import { LoginService } from './components/login/login.service';// Importa el HttpClientModule
 import { AppRoutingModule } from './app-routing.module';
@@ -65,7 +65,8 @@ import { CommonModule } from '@angular/common';
     MatNativeDateModule,
     MatDialogModule,
     MatTableModule,
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule
   ],
   providers: [LoginService], // se colocó el servicio dentro del providers
   bootstrap: [AppComponent]
