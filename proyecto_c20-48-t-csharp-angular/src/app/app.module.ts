@@ -10,6 +10,14 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { AlumnoComponent } from './pages/alumno/alumno.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { PerfilComponent } from './pages/nav-menu/perfil/perfil.component';
+import { CalendarioComponent } from './pages/nav-menu/calendario/calendario.component';
+import { HistorialAcademicoComponent } from './pages/nav-menu/historial-academico/historial-academico.component';
+import { TareasComponent } from './pages/nav-menu/tareas/tareas.component';
+import { FullCalendarModule } from 'primeng/fullcalendar';
+import { AsideComponent } from './pages/aside/aside.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { Calendario2Component } from './pages/calendario2/calendario2.component';
 
 @NgModule({
   declarations: [
@@ -18,13 +26,20 @@ import { MenuComponent } from './components/menu/menu.component';
     FooterComponent,
     HeaderComponent,
     AlumnoComponent,
-    MenuComponent
+    MenuComponent,
+    PerfilComponent,
+    CalendarioComponent,
+    HistorialAcademicoComponent,
+    TareasComponent,
+    AsideComponent,
+    Calendario2Component
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,  // Añade
-    HttpClientModule // AÑADE
+    HttpClientModule, // AÑADE
+    FullCalendarModule, BrowserAnimationsModule
   ],
   providers: [LoginService], // se colocó el servicio dentro del providers
   bootstrap: [AppComponent]

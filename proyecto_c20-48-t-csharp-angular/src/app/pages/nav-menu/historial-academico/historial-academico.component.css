@@ -1,0 +1,17 @@
+/* 
+.foto-perfil{
+    position: absolute;
+    margin-left: 35px;
+    margin-top: 10px;
+} */
+
+.foto-perfil p{
+    text-align: center;
+}
+.foto-perfil img{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: black;
+    margin-top: 7px;
+}

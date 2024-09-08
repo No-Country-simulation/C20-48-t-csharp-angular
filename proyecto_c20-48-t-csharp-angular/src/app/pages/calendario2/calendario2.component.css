@@ -1,0 +1,75 @@
+* {
+    outline: none !important
+}
+
+.wrapper-calendar {
+    width: 305px;
+    height: 330px;
+    position: absolute;
+    gap: .5rem;
+    /* bottom: 0; */
+    top: 400px;
+    margin-top: 60px;
+    margin-left: 990px;
+    background-color: #A3ECF5;
+    border-radius: 6px;
+}
+
+div {
+    text-align: center;
+    width: 300px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+ol {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin: 0;
+    padding: 30px;
+}
+
+li {
+    padding: .25rem;
+    font-size: 1.5ch;
+    cursor: pointer;
+}
+
+li:hover {
+    font-weight: 600;
+}
+
+h2 {
+    margin-bottom: 4px;
+    padding: 0;
+}
+
+.first-day {
+    grid-column-start: var(--first-day-start, 0);
+}
+
+.day-name {
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 2px;
+    padding: 4px;
+    text-align: center;
+}
+
+.header-calendar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+.header-calendar h1 {
+    width: 100%;
+    font-size: 13px;
+}
+
+.header-calendar button {
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+}
