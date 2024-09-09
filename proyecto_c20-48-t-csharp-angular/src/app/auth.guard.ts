@@ -20,9 +20,9 @@ export class AuthGuard implements CanActivate {
 
       // Redirigir según el rol del usuario
       switch (userRole) {
-        case 'waiter':
+        case 'admin':
           // Si el usuario es 'waiter', permitir acceso a la ruta de pedidos
-          if (state.url.includes('/pedidos')) {
+          if (state.url.includes('/administrador')) {
             return true;
           } else {
             this.router.navigate(['pedidos']); // Redirigir a la ruta de pedidos si intenta acceder a otras rutas

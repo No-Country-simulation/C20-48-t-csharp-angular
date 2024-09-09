@@ -19,8 +19,8 @@ export class LoginFormComponent implements OnInit, OnDestroy{
 
 
 
-  username: string = '';
-  password: string = '';
+  email: string = '';
+  clave: string = '';
   rememberMe: boolean = false;
 
   constructor(private loginService: LoginService,
@@ -41,9 +41,8 @@ export class LoginFormComponent implements OnInit, OnDestroy{
 
 
   onLogin(): void {
-    const { email, clave } = this.formulario.value;
-
-    this.subscription = this.loginService.login(email, clave).subscribe(
+    
+    this.subscription = this.loginService.login(this.email, this.clave).subscribe(
       (response => {
         console.log(response);
         // this.authService.setIsLoggedInVar = true;
@@ -52,10 +51,10 @@ export class LoginFormComponent implements OnInit, OnDestroy{
 
         const role = response.user.role;
 
-        if (role === '1') {
+        if (role === 'admin') {
           this.router.navigate(['administrador']);
         } else {
-          this.router.navigate(['profesor']);
+          this.router.navigate(['pedidos']);
         }
       }),
       (error: any) => {
