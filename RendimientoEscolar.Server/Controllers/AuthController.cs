@@ -31,6 +31,13 @@ namespace RendimientoEscolar.Server.Controllers
             public string Username { get; set; }
             public string Password { get; set; }
         }
+
+        [HttpPost("Docente")]
+        public async Task<IActionResult> Docente([FromBody])
+        {
+            
+        }
+        
     }
 
     
