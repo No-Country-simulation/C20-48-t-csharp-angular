@@ -9,60 +9,31 @@ namespace RendimientoEscolar.Server.BDD.Repositorios
 
         private AppDbContext _context;
 
-        public RepositorioUser(AppDbContext context) { 
-            _context = new AppDbContext();
-        }
-
-
-        public void Add(User unDato)
+        public RepositorioUser(AppDbContext context)
         {
-            try
-            {
-                unDato.Validar();
-                _context.Users.Add(unDato);
-                _context.SaveChanges();
-            }
-            catch (Exception ex)
-            {
-
-                throw new Exception("Ocurrio un error al agregar el usuario: " + ex.Message);
-            }
+            _context = context;
         }
-
-
-        public User FindUserByCredentials(string name, string password)
+       
+        public User ObtenerPorEmail(string email)
         {
-            try
-            {
-                return _context.Users.Where(u => u.Nombre == name && u.Password == password).FirstOrDefault();
-            }
-            catch (Exception ex)
-            {
-
-                throw new Exception("Error al buscar el usuario: " + ex);
-            }
-
+            return _context.Users.SingleOrDefault(u => u.Email == email);
         }
-
-
-        public IEnumerable<User> FindAll()
+        public User ObtenerPorEmailYRole(string email, string role)
         {
-            throw new NotImplementedException();
+            return _context.Users.SingleOrDefault(u => u.Email == email && u.Role == role);
         }
 
-        public User FindByID(int id)
+        public List<User> GetAll()
         {
-            throw new NotImplementedException();
+            return _context.Users.ToList();
         }
 
-        public void Remove(int id)
+        public void Delete(User user)
         {
-            throw new NotImplementedException();
+            _context.Users.Remove(user);
+            _context.SaveChanges();
         }
 
-        public void Update(User dato)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
+

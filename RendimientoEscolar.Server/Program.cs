@@ -1,10 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using RendimientoEscolar.Server.BDD.Context;
 using RendimientoEscolar.Server.BDD.Repositorios;
-using RendimientoEscolar.Server.Casos_de_uso;
-using RendimientoEscolar.Server.Interfaces;
-using RendimientoEscolar.Server.Logica.Entidades;
 using RendimientoEscolar.Server.Logica.Interfaces_Repositorios;
+using RendimientoEscolar.Server.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,15 +21,13 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 //inicializacion de repositorios
 
 builder.Services.AddScoped<IRepositorioUser, RepositorioUser>();
-builder.Services.AddScoped<IRepositorioTipoUsuario, RepositorioTipoUsuario>();
 
+//inicializacion de Servicios
 
+builder.Services.AddScoped<AuthenticationService>();
+builder.Services.AddScoped<UserService>();
 
 //inicializacion de casos de uso
-builder.Services.AddScoped<IAddUser, AddUserCU>();
-builder.Services.AddScoped<IObtenerUsuarioPorCredenciales, ObtenerUsuarioPorCredencialesCU>();
-builder.Services.AddScoped<IObtenerTiposUsuario, ObtenerTiposUsuarioCU>();
-builder.Services.AddScoped<IAddTipoUsuario, AddTipoUsuarioCU>();
 
 
 var app = builder.Build();

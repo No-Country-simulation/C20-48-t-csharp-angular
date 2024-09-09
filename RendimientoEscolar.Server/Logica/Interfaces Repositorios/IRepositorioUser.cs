@@ -1,10 +1,11 @@
 ﻿using RendimientoEscolar.Server.Logica.Entidades;
 
-namespace RendimientoEscolar.Server.Logica.Interfaces_Repositorios
-{
-    public interface IRepositorioUser : IRepositorio<User>
-    {
+namespace RendimientoEscolar.Server.Logica.Interfaces_Repositorios;
 
-        public User FindUserByCredentials(string name, string password);
-    }
+public interface IRepositorioUser 
+{
+    User ObtenerPorEmail(string email);
+    User ObtenerPorEmailYRole(string email, string role);
+    List<User> GetAll();
+    void Delete(User user);
 }

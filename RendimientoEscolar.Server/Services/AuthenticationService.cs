@@ -1,4 +1,5 @@
 ﻿
+using RendimientoEscolar.Server.Logica.Entidades;
 using RendimientoEscolar.Server.Logica.Interfaces_Repositorios;
 using System.Security.Cryptography;
 using System.Text;
@@ -14,37 +15,17 @@ namespace RendimientoEscolar.Server.Services
         {
             _userRepository = userRepository;
         }
-
-        public async Task<bool> ValidateUserAsync(string username, string password)
+        public User ObtenerPorEmailYRole(string email, string role)
         {
-            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
-            {
-                throw new ArgumentException("El nombre de usuario y la contraseña no pueden estar vacíos.");
-            }
-
-            var user = await _userRepository.GetByUsernameAsync(username);
-            if (user == null)
-            {
-                return false; 
-            }
-
-            var passwordHash = ComputeSha256Hash(password);
-
-            return user.Password == passwordHash && user.Activo;
+            return _userRepository.ObtenerPorEmailYRole(email, role);
         }
 
-        private string ComputeSha256Hash(string rawData)
+        public bool VerifyPassword(string enteredPassword, string storedHashedPassword)
         {
-            using (var sha256 = SHA256.Create())
-            {
-                byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(rawData));
-                var builder = new StringBuilder();
-                foreach (var b in bytes)
-                {
-                    builder.Append(b.ToString("x2"));
-                }
-                return builder.ToString();
-            }
+            return BCrypt.Net.BCrypt.Verify(enteredPassword, storedHashedPassword);
         }
+
+       
+
     }
 }

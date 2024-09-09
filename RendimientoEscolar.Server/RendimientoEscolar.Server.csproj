@@ -10,6 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="BCrypt.Net" Version="0.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.SpaProxy">
       <Version>8.*-*</Version>
     </PackageReference>
@@ -26,6 +27,11 @@
     <ProjectReference Include="..\rendimientoescolar.client\rendimientoescolar.client.esproj">
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Casos de uso\" />
+    <Folder Include="Migrations\" />
   </ItemGroup>
 
 </Project>
