@@ -1,0 +1,12 @@
+.tareas{
+    width: 822px;
+    height: 590px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 180px;
+    text-align: center;
+}
+
+.sin-tareas p{
+    width: 100%;
+}
