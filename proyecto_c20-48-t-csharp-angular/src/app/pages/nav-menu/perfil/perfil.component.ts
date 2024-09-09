@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-perfil',
@@ -8,13 +8,32 @@ import { Router } from '@angular/router';
 })
 export class PerfilComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  perfilForm: FormGroup;
+
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
+    // Inicializa el formulario con los campos y validaciones
+    this.perfilForm = this.fb.group({
+      nombre: ['', [Validators.required, Validators.minLength(2)]],
+      apellido: ['', [Validators.required, Validators.minLength(2)]],
+      email: ['', [Validators.required, Validators.email]],
+      ciudad: ['', Validators.required],
+      pais: ['', Validators.required]
+    });
   }
 
-  navegar() {
-    this.router.navigate(['/alumno'])
+  // Método para enviar el formulario
+  onSubmit() {
+    if (this.perfilForm.valid) {
+      console.log('Datos del formulario:', this.perfilForm.value);
+    } else {
+      console.log('El formulario no es válido');
+    }
+  }
+
+  // Método para verificar si un campo es inválido y fue tocado
+  campoInvalido(campo: string): boolean {
+    return this.perfilForm.get(campo)?.invalid && this.perfilForm.get(campo)?.touched;
   }
 }
-

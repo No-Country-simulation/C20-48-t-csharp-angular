@@ -1,7 +1,26 @@
-<div class="foto-perfil">
-    <img src="../../../assets/img/user.jpg" alt="">
-    <p>HISTORIAL ACADEMICO</p>
-</div>
+<div class="container">
+    <h1>Historial Académico</h1>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Asignatura</th>
+          <th>Profesor</th>
+          <th>Calificación</th>
+          <th>Feedback</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let record of academicRecords">
+          <td>{{ record.id }}</td>
+          <td>{{ record.subject }}</td>
+          <td>{{ record.teacher }}</td>
+          <td>{{ record.grade }}</td>
+          <td>{{ record.feedback }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
 <app-header></app-header>
 <app-menu></app-menu>

@@ -20,45 +20,46 @@
     margin-bottom: 20px;
     margin-right: 700px;
     font-weight: 100;
-    padding-bottom: 40px;
+    padding-bottom: 70px;
+}
+
+.title h4 {
+    font-size: 20px;
+    margin-top: 10px;
 }
 
 .mb-2 {
-	position: relative;
-	display: flex;
-	align-items: center;
+    display: flex;
+    flex-direction: column; 
     margin-left: 90px;
     margin-bottom: 30px;
-	border: 2px solid #fff;
+    border: 2px solid #fff;
     border-radius: 5px;
-	background-color: #fff;
-	height: 32px;
+    background-color: #fff;
     width: 1000px;
-	overflow: hidden;
 }
 
-.mb-2 .form-label{
+.mb-2 .form-label {
     color: #003366;
     font-family: Roboto;
     font-size: 16px;
     font-weight: 700;
     line-height: 24px;
     letter-spacing: 0.5px;
-    text-align: center;
-    padding: 0 1rem;
+    padding-bottom: 8px;  
 }
 
 .mb-2 input {
-	flex: 1;
-    padding: 0 2rem;
+    padding: 0 1rem;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #003366;
     font-size: 20px;
-    font-family: roboto;
+    font-family: Roboto;
     font-weight: 300;
     line-height: 23.44px;
-    height: 23px;
+    height: 45px;
 }
+
 
 button {
     height: auto;

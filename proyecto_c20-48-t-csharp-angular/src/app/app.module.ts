@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http'; // Importa el HttpClientModule
 import { LoginService } from './components/login/login.service';// Importa el HttpClientModule
 import { AppRoutingModule } from './app-routing.module';
@@ -38,7 +39,8 @@ import { Calendario2Component } from './pages/calendario2/calendario2.component'
     BrowserModule,
     AppRoutingModule,
     FormsModule,  // Añade
-    HttpClientModule, // AÑADE
+    HttpClientModule, // 
+    ReactiveFormsModule,
     FullCalendarModule, BrowserAnimationsModule
   ],
   providers: [LoginService], // se colocó el servicio dentro del providers
