@@ -3,7 +3,7 @@
 "ServerUrl": "https://localhost:4200",
 "RedirectUrl": "",
 "LaunchCommand": "npm start",
-"WorkingDirectory": "C:\\Users\\Usuario\\Source\\Repos\\C20-48-t-csharp-angular\\RendimientoEscolar.Server\\..\\rendimientoescolar.client",
+"WorkingDirectory": "C:\\Users\\user\\Documents\\NoCounty\\C20-48-t-csharp-angular\\RendimientoEscolar.Server\\..\\rendimientoescolar.client",
 "MaxTimeoutInSeconds": "120",
 "KeepRunning": "false"
 }

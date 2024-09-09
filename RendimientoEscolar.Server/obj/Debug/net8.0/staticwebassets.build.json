@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "Hash": "N3XTwJy2Pxap6QJnUVlX915bmVwl7EqkiRFFJjGzbbE=",
+  "Hash": "PxQyHkXTeigB4jL1SeLEdZwTy9+Vc1HcnWabeRew+rs=",
   "Source": "RendimientoEscolar.Server",
   "BasePath": "_content/RendimientoEscolar.Server",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [
     {
-      "Identity": "C:\\Users\\Usuario\\Source\\Repos\\C20-48-t-csharp-angular\\rendimientoescolar.client\\rendimientoescolar.client.esproj",
+      "Identity": "C:\\Users\\user\\Documents\\NoCounty\\C20-48-t-csharp-angular\\rendimientoescolar.client\\rendimientoescolar.client.esproj",
       "Version": 2,
       "Source": "rendimientoescolar.client",
       "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
