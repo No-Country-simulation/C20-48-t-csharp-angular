@@ -1,0 +1,27 @@
+.container {
+    margin: 140px;
+}
+
+.container h1 {
+    width: 100%;
+    height: 42px;
+    font-size: 25px;
+    color: #003366;
+    margin: 15px;
+    text-align: center;
+}
+
+.table {
+    width: 100%;
+    border: 1px solid #00BCD4;
+}
+
+.table th, .table td {
+    text-align: left;
+    padding: 8px;
+    border: 1px solid #00BCD4;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+}

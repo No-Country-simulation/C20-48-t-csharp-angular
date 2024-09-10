@@ -8,8 +8,14 @@ import { AddEducationalNotificationComponent } from './pages/add-educational-not
 import { MenuComponent } from './components/menu/menu.component';
 import { RegistroComponent } from './registro/registro.component';
 import { RecuperarCorreoComponent } from './recuperar-correo/recuperar-correo.component';
+import { AlumnoComponent } from './pages/alumno/alumno.component';
+import { PerfilComponent } from './pages/nav-menu/perfil/perfil.component';
+import { CalendarioComponent } from './pages/nav-menu/calendario/calendario.component'
+import { HistorialAcademicoComponent } from './pages/nav-menu/historial-academico/historial-academico.component'
+import { TareasComponent } from './pages/nav-menu/tareas/tareas.component'
 
 const routes: Routes = [
+  // {path: '', redirectTo: '/alumno', pathMatch: 'full'},
 
   { path: '', component: LoginFormComponent },
   { path: 'administrador', component: AdministradorComponent },
@@ -20,12 +26,23 @@ const routes: Routes = [
 
   { path: 'menu', component: MenuComponent },
   { path: 'registro', component: RegistroComponent },
-  {path: 'recuperar-correo', component: RecuperarCorreoComponent}
+  {path: 'recuperar-correo', component: RecuperarCorreoComponent},
 
   // { path: 'administrador', loadChildren: () => import('./pedidos/pedidos.module').then(m => m.PedidosModule), canActivate: [AuthGuard] }, // Proteger la ruta de pedidos
   // // { path: 'menu', loadChildren: () => import('./cocina/cocina.module').then(m => m.CocinaModule), canActivate: [AuthGuard]  }, // Proteger la ruta de cocina
   // // { path: 'profesor', loadChildren: () => import('./cocina/cocina.module').then(m => m.CocinaModule), canActivate: [AuthGuard]  }, // Proteger la ruta de cocina
   // { path: '**', redirectTo: '', pathMatch: 'full' }
+  // {path: 'login'  , component: LoginFormComponent},
+
+  {path: 'alumno'  , component: AlumnoComponent},
+
+  {path: 'perfil'  , component: PerfilComponent},
+
+  {path: 'calendario' , component: CalendarioComponent},
+
+  {path: 'historial' , component: HistorialAcademicoComponent},
+
+  {path: 'tareas' , component: TareasComponent}
 
 ];
 

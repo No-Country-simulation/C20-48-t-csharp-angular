@@ -18,7 +18,7 @@ namespace RendimientoEscolar.Server.Casos_de_uso
         {
             User aux = new User();
             aux.Nombre = user.Nombre;
-            aux.tipousuario = (Logica.Entidades.TipoUsuario)user.tipousuario;
+            aux.TipoUsuarioId = user.TipoUsuarioId;
             aux.Password = user.Password;
             aux.Activo = true;
             _repositorioUser.Add(aux);

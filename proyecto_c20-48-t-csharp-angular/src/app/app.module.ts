@@ -32,6 +32,13 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatTableModule } from '@angular/material/table';
 import { CommonModule } from '@angular/common';
 
+import { PerfilComponent } from './pages/nav-menu/perfil/perfil.component';
+import { CalendarioComponent } from './pages/nav-menu/calendario/calendario.component';
+import { HistorialAcademicoComponent } from './pages/nav-menu/historial-academico/historial-academico.component';
+import { TareasComponent } from './pages/nav-menu/tareas/tareas.component';
+import { FullCalendarModule } from 'primeng/fullcalendar';
+import { AsideComponent } from './pages/aside/aside.component';
+import { Calendario2Component } from './pages/calendario2/calendario2.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +55,12 @@ import { CommonModule } from '@angular/common';
     MenuComponent,
     RegistroComponent,
     RecuperarCorreoComponent,
-
+    PerfilComponent,
+    CalendarioComponent,
+    HistorialAcademicoComponent,
+    TareasComponent,
+    AsideComponent,
+    Calendario2Component
   ],
   imports: [
     BrowserModule,
@@ -66,7 +78,8 @@ import { CommonModule } from '@angular/common';
     MatDialogModule,
     MatTableModule,
     CommonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FullCalendarModule
   ],
   providers: [LoginService], // se colocó el servicio dentro del providers
   bootstrap: [AppComponent]
