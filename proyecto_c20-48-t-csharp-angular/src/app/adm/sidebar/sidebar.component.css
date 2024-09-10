@@ -18,6 +18,7 @@
   font-size: 16px;
   cursor: pointer;
   margin-top: 10px;
+  margin-right: 10px;
 }
 
 .contenido {
@@ -62,7 +63,33 @@ button {
   color: white;
 }
 
+
 h2 {
+  text-align: center;
+  margin: 28px 0px 20px;
+  font-size: 31px;
   margin-bottom: 20px;
   color: #FFFFFF;
+}
+
+mat-form-field {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+button {
+  margin-top: 20px;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+#botonAceptar_cancelar{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+#aceptar{
+  margin-right: 10px;
 }

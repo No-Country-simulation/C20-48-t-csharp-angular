@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,8 +9,12 @@ import { Router } from '@angular/router';
 export class SidebarComponent {
   currentView: string = 'default'; // Controla qué vista mostrar
 
-
   constructor(private router: Router) { }
+
+  navigateTo(view: string): void {
+    this.router.navigate([view]);
+  }
+
 
 
 
@@ -27,13 +31,6 @@ export class SidebarComponent {
 
   displayedColumns: string[] = ['nombre', 'correo', 'tipo', 'actions'];
 
-  navigateTo(view: string): void {
-    this.currentView = view;
-
-
-  }
-
-
 
   modifyUser(user: any) {
     // Lógica para modificar el usuario
@@ -44,6 +41,8 @@ export class SidebarComponent {
     // Lógica para eliminar el usuario
     console.log('Eliminar usuario', user);
   }
+
+
 
 
 }

@@ -1,1 +1,13 @@
-<p>virtual-computers works!</p>
+<p>Agregar materias</p>
+<form (ngSubmit)="onSubmit()" #registroMateria="ngForm">
+  <mat-form-field>
+    <mat-label>Nombre de la materia</mat-label>
+    <input matInput [(ngModel)]="registro.asignatura" name="asignatura" type="text" required>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Nombre del profesor</mat-label>
+    <input matInput [(ngModel)]="registro.profesor" name="profesor" type="text" required>
+  </mat-form-field>
+  <button class="botonAceptar_cancelar" id="aceptar" mat-raised-button color="primary" type="submit">Aceptar</button>
+  <button class="botonAceptar_cancelar" id="cancelar" mat-raised-button color="primary" type="submit">Cancelar</button>
+</form>

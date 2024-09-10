@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-add-educational-notification',
   templateUrl: './add-educational-notification.component.html',
   styleUrls: ['./add-educational-notification.component.css']
 })
-export class AddEducationalNotificationComponent implements OnInit {
+export class AddEducationalNotificationComponent  {
 
-  constructor() { }
+  registro = {
+    division: '',
+    profesor: ''
+  };
 
-  ngOnInit(): void {
+  onSubmit() {
+    console.log(this.registro);
   }
-
 }
+
