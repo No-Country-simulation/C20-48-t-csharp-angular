@@ -15,34 +15,20 @@ import { HistorialAcademicoComponent } from './pages/nav-menu/historial-academic
 import { TareasComponent } from './pages/nav-menu/tareas/tareas.component'
 
 const routes: Routes = [
-  // {path: '', redirectTo: '/alumno', pathMatch: 'full'},
-
   { path: '', component: LoginFormComponent },
   { path: 'administrador', component: AdministradorComponent },
   { path: 'virtual-computers', component: VirtualComputersComponent },
   { path: 'gestion-usuario', component: GestionUsuarioComponent },
-  { path: 'add-educational-notification', component: AddEducationalNotificationComponent },
-  { path: '', redirectTo: '/virtual-computers', pathMatch: 'full' },
-
+  { path: 'add-educational-notification', component: AddEducationalNotificationComponent },  
   { path: 'menu', component: MenuComponent },
   { path: 'registro', component: RegistroComponent },
-  {path: 'recuperar-correo', component: RecuperarCorreoComponent},
-
-  // { path: 'administrador', loadChildren: () => import('./pedidos/pedidos.module').then(m => m.PedidosModule), canActivate: [AuthGuard] }, // Proteger la ruta de pedidos
-  // // { path: 'menu', loadChildren: () => import('./cocina/cocina.module').then(m => m.CocinaModule), canActivate: [AuthGuard]  }, // Proteger la ruta de cocina
-  // // { path: 'profesor', loadChildren: () => import('./cocina/cocina.module').then(m => m.CocinaModule), canActivate: [AuthGuard]  }, // Proteger la ruta de cocina
-  // { path: '**', redirectTo: '', pathMatch: 'full' }
-  // {path: 'login'  , component: LoginFormComponent},
-
-  {path: 'alumno'  , component: AlumnoComponent},
-
-  {path: 'perfil'  , component: PerfilComponent},
-
-  {path: 'calendario' , component: CalendarioComponent},
-
-  {path: 'historial' , component: HistorialAcademicoComponent},
-
-  {path: 'tareas' , component: TareasComponent}
+  { path: 'recuperar-correo', component: RecuperarCorreoComponent },
+  { path: 'alumno', component: AlumnoComponent },
+  { path: 'perfil', component: PerfilComponent },
+  { path: 'calendario', component: CalendarioComponent },
+  { path: 'historial', component: HistorialAcademicoComponent },
+  { path: 'tareas', component: TareasComponent },
+  // { path: '', redirectTo: '/virtual-computers', pathMatch: 'full' },
 
 ];
 

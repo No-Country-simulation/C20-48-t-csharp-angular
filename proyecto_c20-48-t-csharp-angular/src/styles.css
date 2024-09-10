@@ -15,7 +15,7 @@ body {
 body {
   font-family: roboto;
   margin: 0;
-  display: flex;
+  /* display: flex;  // luciano colocarlo en tu componente estudiante
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100vh; */
 }

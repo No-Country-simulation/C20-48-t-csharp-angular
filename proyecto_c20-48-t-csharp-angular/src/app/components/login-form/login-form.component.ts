@@ -51,10 +51,33 @@ export class LoginFormComponent implements OnInit, OnDestroy{
 
         const role = response.user.role;
 
+        // esto voy a usar para que me lleve a la ruta que corresponde
+
+        // switch(role){
+        //   case 'admin':
+        //     this.router.navigate(['administrador']);
+        //   break;
+        //   case 'profesor':
+        //     this.router.navigate(['profesor']);
+        //     break;
+        //   case 'alumno':
+        //     this.router.navigate(['alumno']);
+        //     break;
+        //   default:
+        //     this.router.navigate(['login']);
+        // }
+
+
+
+
+
         if (role === 'admin') {
           this.router.navigate(['administrador']);
-        } else {
-          this.router.navigate(['pedidos']);
+        } else if(role === 'waiter'){
+          this.router.navigate(['alumno']);
+
+        }else{
+          this.router.navigate(['registro']);
         }
       }),
       (error: any) => {
@@ -76,38 +99,6 @@ export class LoginFormComponent implements OnInit, OnDestroy{
       this.subscription.unsubscribe();
     }
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-  // onLogin(): Verifica que los campos no estén vacíos y llama al servicio para enviar los datos. Maneja la respuesta y el error del servicio.
-
-  // onLogin(): void{
-  //     if (!this.username || !this.password) {
-  //       return; // Validación adicional si es necesario
-  //     }
-  //     this.loginService.login(this.username, this.password).subscribe(
-  //       response => {
-  //         console.log('Login exitoso', response);
-  //         // Maneja la respuesta del login, como redirigir al usuario o almacenar el token
-  //       },
-  //       error => {
-  //         console.error('Error en el login', error);
-  //         // Maneja el error del login, muestra un mensaje al usuario si es necesario
-  //       }
-  //     );
-
-  //   }
-
 
     navigateTo(route: string): void {
       this.router.navigate([route]);
