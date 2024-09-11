@@ -19,34 +19,48 @@
       </div>
     </div>
   </nav>
-<div class="container">
-  <div class="content">
-    <button class="btn btn-primary ml-auto" (click)="toogle()">Ocultar</button>
+  <div class="container">
+    <div class="content">
+      <button class="btn btn-primary ml-auto" (click)="toggle()">Ocultar</button>
+    </div>
+    <br>
+  
+    <!-- Mensaje de feedback general -->
+    <div *ngIf="mensajeFeedback" [ngClass]="{'alert': true, 'alert-success': feedbackExitoso, 'alert-danger': !feedbackExitoso}" role="alert">
+      {{ mensajeFeedback }}
+    </div>
+  
+    <table class="table" *ngIf="mostrar">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Nombre</th>
+          <th>Calificación</th>
+          <th>Feedback del Profesor</th>
+          <th>Acción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let estudiante of listaEstudiantes; let i = index">
+          <td>{{i+1}}</td>
+          <td>{{estudiante.nombre}}</td>
+          <td>
+            <select [(ngModel)]="estudiante.estado" (change)="marcarCambios()">
+              <option value="excento">Excento</option>
+              <option value="reprobado">Reprobado</option>
+              <option value="regular">Regular</option>
+            </select>
+          </td>
+          <td>
+            <input type="text" class="form-control" [(ngModel)]="estudiante.feedback" placeholder="Escribe un feedback..." (input)="marcarCambios()" />
+          </td>
+          <td>
+            <button class="btn btn-primary" (click)="guardarCambiosEstudiante(i)">Guardar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <h3 *ngIf="listaEstudiantes.length === 0">No hay registros para mostrar</h3>
   </div>
-  <br>
-  <table class="table" *ngIf="mostrar">
-    <thead>
-      <th>num</th>
-      <th>Nombre</th>
-      <th>Estado</th>
-    </thead>
-    <tbody>
-      <tr *ngFor="let estudiante of listaEstudiantes; let i = index" [ngSwitch]="estudiante.estado">
-        <td>{{i+1}}</td>
-        <td>{{estudiante.nombre}}</td>
-        <td [ngStyle]="{ 'font-style': estudiante.estado === 'aprobado' ? 'italic' : 'normal'}">
-          <span *ngSwitchCase="'excento'" class="badge bg-success">
-            {{estudiante.estado}}
-          </span>
-          <span *ngSwitchCase="'reprobado'" class="badge bg-danger">
-            {{estudiante.estado}}
-          </span>
-          <span *ngSwitchCase="'regular'" class="badge bg-secondary">  
-            {{estudiante.estado}}
-          </span>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 *ngIf="listaEstudiantes.length === 0">No hay registros para mostrar</h3>
-</div>
+  
