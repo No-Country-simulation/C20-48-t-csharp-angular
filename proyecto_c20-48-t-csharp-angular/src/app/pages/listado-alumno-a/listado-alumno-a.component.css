@@ -1,0 +1,25 @@
+.navbar {
+    border-radius: 8px;
+    height: 60px;   
+    padding-top: 0;
+    padding-bottom: 0; 
+}
+
+.container-fluid {
+    background-color: #003366;
+    border-radius: 8px;
+    height: 60px;  
+    display: flex;
+    flex-direction: row-reverse;  
+}
+
+.navbar-grupo {
+    color: #fff;
+    font-family: 'poppins';
+    font-weight: 600;
+    width: auto;
+}
+
+.btn {
+    margin-top: 1rem;
+}

@@ -44,6 +44,7 @@ import { MenuProfesorComponent } from './pages/menu-profesor/menu-profesor.compo
 import { HistorialComponent } from './pages/historial/historial.component';
 import { ListadoDeAlumnosComponent } from './pages/listado-de-alumnos/listado-de-alumnos.component';
 import { NotasComponent } from './pages/notas/notas.component';
+import { ListadoAlumnoAComponent } from './pages/listado-alumno-a/listado-alumno-a.component';
 
 @NgModule({
   declarations: [
@@ -70,7 +71,8 @@ import { NotasComponent } from './pages/notas/notas.component';
     MenuProfesorComponent,
     HistorialComponent,
     ListadoDeAlumnosComponent,
-    NotasComponent
+    NotasComponent,
+    ListadoAlumnoAComponent
   ],
   imports: [
     BrowserModule,

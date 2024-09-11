@@ -15,6 +15,7 @@ import { HistorialAcademicoComponent } from './pages/nav-menu/historial-academic
 import { TareasComponent } from './pages/nav-menu/tareas/tareas.component'
 import { ProfesorComponent } from './pages/profesor/profesor.component';
 import { ListadoDeAlumnosComponent } from './pages/listado-de-alumnos/listado-de-alumnos.component';
+import { ListadoAlumnoAComponent } from './pages/listado-alumno-a/listado-alumno-a.component';
 import { NotasComponent } from './pages/notas/notas.component';
 
 const routes: Routes = [
@@ -33,7 +34,8 @@ const routes: Routes = [
   { path: 'tareas', component: TareasComponent },
   { path: 'profesor', component: ProfesorComponent },
   { path: 'listado-de-alumnos', component: ListadoDeAlumnosComponent },
-  { path: 'notas', component: NotasComponent }
+  { path: 'notas', component: NotasComponent },
+  { path: 'listado-alumno-a', component: ListadoAlumnoAComponent }
   // { path: '', redirectTo: '/virtual-computers', pathMatch: 'full' },
 
 ];
