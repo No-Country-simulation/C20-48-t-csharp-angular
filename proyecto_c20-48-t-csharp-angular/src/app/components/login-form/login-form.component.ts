@@ -76,6 +76,9 @@ export class LoginFormComponent implements OnInit, OnDestroy{
         } else if(role === 'waiter'){
           this.router.navigate(['alumno']);
 
+        }else if(role === 'chef'){
+          this.router.navigate(['profesor']);
+        
         }else{
           this.router.navigate(['registro']);
         }

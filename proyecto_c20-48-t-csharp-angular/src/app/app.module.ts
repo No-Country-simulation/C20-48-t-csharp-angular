@@ -39,6 +39,11 @@ import { TareasComponent } from './pages/nav-menu/tareas/tareas.component';
 import { FullCalendarModule } from 'primeng/fullcalendar';
 import { AsideComponent } from './pages/aside/aside.component';
 import { Calendario2Component } from './pages/calendario2/calendario2.component';
+import { ProfesorComponent } from './pages/profesor/profesor.component';
+import { MenuProfesorComponent } from './pages/menu-profesor/menu-profesor.component';
+import { HistorialComponent } from './pages/historial/historial.component';
+import { ListadoDeAlumnosComponent } from './pages/listado-de-alumnos/listado-de-alumnos.component';
+import { NotasComponent } from './pages/notas/notas.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +65,12 @@ import { Calendario2Component } from './pages/calendario2/calendario2.component'
     HistorialAcademicoComponent,
     TareasComponent,
     AsideComponent,
-    Calendario2Component
+    Calendario2Component,
+    ProfesorComponent,
+    MenuProfesorComponent,
+    HistorialComponent,
+    ListadoDeAlumnosComponent,
+    NotasComponent
   ],
   imports: [
     BrowserModule,

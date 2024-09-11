@@ -1,0 +1,51 @@
+.menu {
+    width: 250px;
+    height: 1125px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    padding-top: 34px;
+    padding-bottom: 100%;
+    gap: .5rem;
+    top: 66px;
+    left: 0;
+    background-color: #003366;
+    z-index: 3;
+}
+
+.boton-menu {
+    background-color: transparent;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    text-align: left;
+    gap: 1rem;
+    top: 0;
+    left: 0;
+    font-weight: 600;
+    padding: 1rem;
+    font-size: .85rem;
+    width: 100%;
+    height: auto;
+}
+
+.boton-menu:hover {
+    background-color: #0080ff;
+    color: #fff;
+    width: 100%;
+    position: relative;
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+.boton-menu {
+    width: 24px;
+    height: 24px;
+    border: 2px;
+    color: #ffffff;
+
+}
