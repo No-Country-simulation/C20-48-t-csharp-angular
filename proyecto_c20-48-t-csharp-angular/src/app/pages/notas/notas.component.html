@@ -1,0 +1,17 @@
+<p>notas works!</p>
+<h2>Agregar Notas para {{ alumno.nombre }}</h2>
+<form (ngSubmit)="onSubmit()">
+  <mat-form-field>
+    <mat-label>Corte 1</mat-label>
+    <input matInput [(ngModel)]="alumno.notas.corte1" name="corte1" type="number" required>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Corte 2</mat-label>
+    <input matInput [(ngModel)]="alumno.notas.corte2" name="corte2" type="number" required>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Corte 3</mat-label>
+    <input matInput [(ngModel)]="alumno.notas.corte3" name="corte3" type="number" required>
+  </mat-form-field>
+  <button mat-raised-button color="primary" type="submit">Guardar Notas</button>
+</form>

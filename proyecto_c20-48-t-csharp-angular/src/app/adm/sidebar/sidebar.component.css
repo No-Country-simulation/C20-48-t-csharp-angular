@@ -8,6 +8,7 @@
   width: 200px;
   background-color: #003366;
   padding: 10px;
+  
 }
 
 .añadirUsuario {
@@ -35,6 +36,7 @@
   height: 43px;
   font-size: 18px;
   color: #FFFFFF;
+  text-align: left;
 }
 
 table {
@@ -67,7 +69,7 @@ button {
 h2 {
   text-align: center;
   margin: 28px 0px 20px;
-  font-size: 31px;
+  font-size: 30px;
   margin-bottom: 20px;
   color: #FFFFFF;
 }
