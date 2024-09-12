@@ -52,6 +52,7 @@ import { PerfilProfesorComponent } from './pages/perfil-profesor/perfil-profesor
 import { HeaderPorofesorComponent } from './pages/header-porofesor/header-porofesor.component';
 import { ForoProfesorComponent } from './pages/foro-profesor/foro-profesor.component';
 import { TareasProfesorComponent } from './pages/tareas-profesor/tareas-profesor.component';
+import { HeaderAdministradorComponent } from './adm/header-administrador/header-administrador.component';
 
 @NgModule({
   declarations: [
@@ -86,7 +87,8 @@ import { TareasProfesorComponent } from './pages/tareas-profesor/tareas-profesor
     PerfilProfesorComponent,
     HeaderPorofesorComponent,
     ForoProfesorComponent,
-    TareasProfesorComponent
+    TareasProfesorComponent,
+    HeaderAdministradorComponent
   ],
   imports: [
     BrowserModule,

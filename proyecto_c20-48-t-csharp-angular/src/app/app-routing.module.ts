@@ -23,6 +23,7 @@ import { CalendarioProfesorComponent } from './pages/calendario-profesor/calenda
 import { PerfilProfesorComponent } from './pages/perfil-profesor/perfil-profesor.component';
 import { ForoProfesorComponent } from './pages/foro-profesor/foro-profesor.component';
 import { TareasProfesorComponent } from './pages/tareas-profesor/tareas-profesor.component';
+import { HeaderAdministradorComponent } from './adm/header-administrador/header-administrador.component';
 
 const routes: Routes = [
   { path: '', component: LoginFormComponent },
@@ -47,8 +48,8 @@ const routes: Routes = [
   { path: 'calendario-profesor', component: CalendarioProfesorComponent },
   { path: 'perfil-profesor', component: PerfilProfesorComponent },
   { path: 'foro-profesor', component: ForoProfesorComponent },
-  { path: 'tareas-profesor', component: TareasProfesorComponent }
-
+  { path: 'tareas-profesor', component: TareasProfesorComponent },
+  { path: 'header-administrador', component: HeaderAdministradorComponent }
 
   // { path: '', redirectTo: '/virtual-computers', pathMatch: 'full' },
 
