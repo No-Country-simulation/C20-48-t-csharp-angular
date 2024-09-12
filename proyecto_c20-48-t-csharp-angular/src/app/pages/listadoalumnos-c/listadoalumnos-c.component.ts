@@ -1,19 +1,18 @@
-import { Component} from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-listado-alumno-a',
-  templateUrl: './listado-alumno-a.component.html',
-  styleUrls: ['./listado-alumno-a.component.css']
+  selector: 'app-listadoalumnos-c',
+  templateUrl: './listadoalumnos-c.component.html',
+  styleUrls: ['./listadoalumnos-c.component.css']
 })
-export class ListadoAlumnoAComponent {
-
+export class ListadoalumnosCComponent {
   listaEstudiantes = [
-    { nombre: "Tomas Fernandez", estado: "excento", feedback: "" },
-    { nombre: "Edu Villa", estado: "excento", feedback: "" },
-    { nombre: "Marta Perez", estado: "reprobado", feedback: "" },
-    { nombre: "Carlos Lara", estado: "reprobado", feedback: "" },
-    { nombre: "Val Uzal", estado: "excento", feedback: "" },
-    { nombre: "Val Uzal", estado: "excento", feedback: "" }
+    { nombre: "Maria Fernandez", estado: "excento", feedback: "" },
+    { nombre: "Ricardo López", estado: "excento", feedback: "" },
+    { nombre: "Laura Chiquito", estado: "reprobado", feedback: "" },
+    { nombre: "Sofia Castro", estado: "reprobado", feedback: "" },
+    { nombre: "Vicente Chaparro", estado: "excento", feedback: "" },
+    { nombre: "Juan Gómez", estado: "excento", feedback: "" }
   ];
 
   mostrar = true;

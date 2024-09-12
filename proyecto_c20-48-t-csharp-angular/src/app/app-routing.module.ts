@@ -16,7 +16,13 @@ import { TareasComponent } from './pages/nav-menu/tareas/tareas.component'
 import { ProfesorComponent } from './pages/profesor/profesor.component';
 import { ListadoDeAlumnosComponent } from './pages/listado-de-alumnos/listado-de-alumnos.component';
 import { ListadoAlumnoAComponent } from './pages/listado-alumno-a/listado-alumno-a.component';
+import { ListadoalumnosBComponent } from './pages/listadoalumnos-b/listadoalumnos-b.component';
+import { ListadoalumnosCComponent } from './pages/listadoalumnos-c/listadoalumnos-c.component';
 import { NotasComponent } from './pages/notas/notas.component';
+import { CalendarioProfesorComponent } from './pages/calendario-profesor/calendario-profesor.component';
+import { PerfilProfesorComponent } from './pages/perfil-profesor/perfil-profesor.component';
+import { ForoProfesorComponent } from './pages/foro-profesor/foro-profesor.component';
+import { TareasProfesorComponent } from './pages/tareas-profesor/tareas-profesor.component';
 
 const routes: Routes = [
   { path: '', component: LoginFormComponent },
@@ -35,7 +41,15 @@ const routes: Routes = [
   { path: 'profesor', component: ProfesorComponent },
   { path: 'listado-de-alumnos', component: ListadoDeAlumnosComponent },
   { path: 'notas', component: NotasComponent },
-  { path: 'listado-alumno-a', component: ListadoAlumnoAComponent }
+  { path: 'listado-alumno-a', component: ListadoAlumnoAComponent },
+  { path: 'listado-alumnos-b', component: ListadoalumnosBComponent },
+  { path: 'listado-alumnos-c', component: ListadoalumnosCComponent },
+  { path: 'calendario-profesor', component: CalendarioProfesorComponent },
+  { path: 'perfil-profesor', component: PerfilProfesorComponent },
+  { path: 'foro-profesor', component: ForoProfesorComponent },
+  { path: 'tareas-profesor', component: TareasProfesorComponent }
+
+
   // { path: '', redirectTo: '/virtual-computers', pathMatch: 'full' },
 
 ];

@@ -1,10 +1,13 @@
+<app-administrador></app-administrador>
+
+
 
 <section>
-<h2>Gestión de usuarios</h2>
+  <h2>Gestión de usuarios</h2>
 
-<button class="añadirUsuario" (click)="navigateTo('registro')">Añadir usuario</button>
+  <button class="añadirUsuario" (click)="navigateTo('registro')">Añadir usuario</button>
 
-<button class="añadirUsuario">Importar</button>
+  <button class="añadirUsuario">Importar</button>
 
 
 
@@ -36,7 +39,7 @@
         <button class="botonmodificar-eliminar" id="eliminar" mat-button (click)="deleteUser(usuario)">Eliminar</button>
       </td>
     </ng-container>
-    
+
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
