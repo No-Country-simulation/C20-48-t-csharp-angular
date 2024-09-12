@@ -1,17 +1,25 @@
 <app-header-administrador></app-header-administrador>
-
-<form (ngSubmit)="onSubmit()" #registroMateria="ngForm">
-  <mat-form-field>
-    <mat-label>Nombre de la materia</mat-label>
-    <input matInput [(ngModel)]="registro.asignatura" name="asignatura" type="text" required>
-  </mat-form-field>
-  <mat-form-field>
-    <mat-label>Nombre del profesor</mat-label>
-    <input matInput [(ngModel)]="registro.profesor" name="profesor" type="text" required>
-  </mat-form-field>
-  <button class="botonAceptar_cancelar" id="aceptar" mat-raised-button color="primary" type="submit">Aceptar</button>
-  <button class="botonAceptar_cancelar" id="cancelar" mat-raised-button color="primary" type="submit">Cancelar</button>
-</form>
-
 <app-sidebar></app-sidebar>
+
+<section>
+    <h2>Agregar materia</h2>
+<div class="form-container">
+  <form id="adminForm">
+      <div class="form-group">
+          <label for="division">Nombre de materia</label>
+          <input type="text" id="division" name="division" required>
+      </div>
+      <div class="form-group">
+          <label for="profesor">Nombre del profesor</label>
+          <input type="text" id="profesor" name="profesor" required>
+      </div>
+      <div class="button-group">
+          <button class="btn" type="submit">Aceptar</button>
+          <button class="btn cancel" type="button">Cancelar</button>
+      </div>
+  </form>
+</div>
+</section>
+
+
 <app-footer></app-footer>

@@ -22,14 +22,14 @@ export class GestionUsuarioComponent {
     correoadicional: '',
   };
 
-constructor(private router: Router){}
-
   usuarios = [
     { nombre: 'Juan Pérez', correo: 'juan.perez@example.com', tipo: 'Profesor' },
     { nombre: 'Ana Gómez', correo: 'ana.gomez@example.com', tipo: 'Administrador' }
   ];
 
   displayedColumns: string[] = ['nombre', 'correo', 'tipo', 'actions'];
+
+  constructor(private router: Router) {}
 
   getRol(): string {
     switch (this.registro.rol) {
@@ -46,14 +46,15 @@ constructor(private router: Router){}
 
   modifyUser(user: any) {
     console.log('Modificar usuario', user);
+    // Lógica para modificar el usuario
   }
 
   deleteUser(user: any) {
     console.log('Eliminar usuario', user);
+    // Lógica para eliminar el usuario
   }
 
   navigateTo(view: string): void {
-    this.router.navigate(['registro']);
+    this.router.navigate([view]);
   }
-
 }
