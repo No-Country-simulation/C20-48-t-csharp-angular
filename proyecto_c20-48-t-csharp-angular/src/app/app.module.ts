@@ -19,6 +19,8 @@ import { FullCalendarModule } from 'primeng/fullcalendar';
 import { AsideComponent } from './pages/aside/aside.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Calendario2Component } from './pages/calendario2/calendario2.component';
+import { MateriasComponent } from './pages/materias/materias.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,8 @@ import { Calendario2Component } from './pages/calendario2/calendario2.component'
     HistorialAcademicoComponent,
     TareasComponent,
     AsideComponent,
-    Calendario2Component
+    Calendario2Component,
+    MateriasComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +44,8 @@ import { Calendario2Component } from './pages/calendario2/calendario2.component'
     FormsModule,  // Añade
     HttpClientModule, // 
     ReactiveFormsModule,
-    FullCalendarModule, BrowserAnimationsModule
+    FullCalendarModule, BrowserAnimationsModule,
+    FontAwesomeModule
   ],
   providers: [LoginService], // se colocó el servicio dentro del providers
   bootstrap: [AppComponent]

@@ -1,0 +1,90 @@
+.dashboard-container {
+    width: 740px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 120px;
+    margin-bottom: 120px;
+    background-color: #f9f9f9;
+    box-shadow: -10px 0 10px -10px #000000;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.subject-summary {
+    margin-bottom: 20px;
+}
+
+.subject-summary h2{
+    color: #003366;
+    font-size: 27px;
+    margin-top: 7px;
+    margin-bottom: 25px;
+}
+
+h3{
+    color: #003366;
+    font-size: 24px;
+    margin-bottom: 22px;
+}
+
+ul{
+    list-style-type: none;
+}
+
+li, a{
+    margin-top: 10px;
+    padding-bottom: 2px;
+    color: #000000;
+    text-align: left;
+}
+
+li::before{
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background-color: #000;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.action-buttons{
+    margin-top: 15px;
+    display: flex;
+    gap: 154px;
+}
+
+.action-buttons button {
+    background-color: #00a7e1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 159.99px;
+    height: 51.19px;
+    top: 358.29px;
+    left: 822.61px;
+    gap: 0px;
+    opacity: 0px;
+}
+
+.latest-activities,
+.study-material,
+.progress-section {
+    margin-top: 20px;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #e0e0e0;
+    height: 18px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.progress {
+    background-color: #CDDC39;
+    height: 100%;
+    border-radius: 10px;
+}

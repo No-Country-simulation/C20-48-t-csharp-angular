@@ -2,18 +2,23 @@
     outline: none !important
 }
 
+.container-calendar {
+    width: 100%;
+    align-content: center;
+}
+
 .wrapper-calendar {
     width: 305px;
     height: 330px;
     position: absolute;
-    gap: .5rem;
     top: 400px;
-    margin-top: 75px;
-    margin-left: 990px;
+    right: 10px;
+    margin-top: 45px;
     padding-top: 20px;
     background-color: #A3ECF5;
     box-shadow: -10px 0 15px -10px #000000;
     border-radius: 6px;
+    gap: .5rem;
 }
 
 div {
@@ -58,10 +63,11 @@ h2 {
 }
 
 .header-calendar {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    align-content: center;
+    justify-content: center;
 }
 
 .header-calendar h1 {
@@ -73,4 +79,82 @@ h2 {
     cursor: pointer;
     background-color: transparent;
     border: 0;
+}
+
+/* Media Queries para Responsive*/
+
+@media (max-width: 600px) {
+    .container-calendar{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .wrapper-calendar {
+        width: 100%;
+        position: relative;
+        top: auto;
+        margin: 10px auto;
+        align-content: center;
+        padding: 20px;
+        height: auto;
+    }
+
+    ol {
+        width: 100%;
+        justify-content: center;
+        padding: 10px;
+        grid-template-columns: repeat(7, 1fr);
+    }
+
+    li {
+        font-size: 1.1ch;
+    }
+
+    .header-calendar {
+        width: 100%;
+    }
+
+    .header-calendar h1 {
+        font-size: 10px;
+    }
+
+    .header-calendar button {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 1250px) {
+    .wrapper-calendar {
+        width: 40%;
+        position: relative;
+        top: auto;
+        margin: 20px auto;
+        padding: 10px;
+        height: 330;
+    }
+
+    ol {
+        padding: 20px;
+    }
+
+    li {
+        font-size: 1.3ch;
+    }
+
+    .header-calendar h1 {
+        font-size: 12px;
+    }
+
+    .fecha {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1251px) {
+    .wrapper-calendar {
+        width: 305px;
+        height: 330px;
+        top: 400px;
+        right: 10px;
+    }
 }
