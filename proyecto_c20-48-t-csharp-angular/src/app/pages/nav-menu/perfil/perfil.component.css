@@ -26,7 +26,7 @@
     font-size: 25px;
     color: #003366;
     margin-bottom: 20px;
-    margin-right: 700px;
+    margin-right: 800px;
     font-weight: 100;
     padding-bottom: 70px;
 }
@@ -84,10 +84,10 @@ button {
 
 /* Media Queries para Responsive*/
 
-@media (max-width: 1200px) {
+@media (max-width: 1250px) {
 
     form {
-        width: 100%;
+        width: 90%;
     }
 
     .mb-2, button {

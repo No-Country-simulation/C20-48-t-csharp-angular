@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faBars, faHome, faUser, faCalendar, faHistory, faTasks, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faHome, faUser, faCalendar, faHistory, faTasks, faSignOutAlt, faUsers } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-menu',
@@ -19,6 +19,7 @@ export class MenuComponent implements OnInit {
   faHistory = faHistory;
   faTasks = faTasks;
   faSignOutAlt = faSignOutAlt;
+  faUsers = faUsers;
 
   menuAbierto = false;
 

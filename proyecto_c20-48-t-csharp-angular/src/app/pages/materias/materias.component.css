@@ -1,6 +1,6 @@
 .dashboard-container {
-    width: 90%; /* Cambiado de un ancho fijo a un porcentaje */
-    max-width: 740px; /* Asegura que no sea más ancho de lo deseado */
+    width: 90%; 
+    max-width: 740px; 
     margin: 0 auto;
     padding: 20px;
     margin-top: 80px;
@@ -53,8 +53,8 @@ li::before{
 .action-buttons {
     margin-top: 15px;
     display: flex;
-    justify-content: space-between; /* Distribuye mejor los botones */
-    gap: 10px; /* Aumenta el espacio entre botones */
+    justify-content: space-between; 
+    gap: 10px;
 }
 
 .action-buttons button {
@@ -65,7 +65,7 @@ li::before{
     cursor: pointer;
     width: 159.99px;
     height: 51.19px;
-    opacity: 1; /* Asegura que los botones sean visibles */
+    opacity: 1;
 }
 
 .latest-activities,
