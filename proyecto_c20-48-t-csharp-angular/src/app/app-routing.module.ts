@@ -7,6 +7,7 @@ import { CalendarioComponent } from './pages/nav-menu/calendario/calendario.comp
 import { HistorialAcademicoComponent } from './pages/nav-menu/historial-academico/historial-academico.component'
 import { TareasComponent } from './pages/nav-menu/tareas/tareas.component'
 import { MateriasComponent } from './pages/materias/materias.component'
+import { ForoComponent } from './pages/foro/foro.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/alumno', pathMatch: 'full'},
@@ -23,7 +24,9 @@ const routes: Routes = [
 
   {path: 'tareas' , component: TareasComponent},
 
-  {path: 'materias' , component: MateriasComponent}
+  {path: 'materias' , component: MateriasComponent},
+
+  {path: 'foro' , component: ForoComponent}
 
 ];
 

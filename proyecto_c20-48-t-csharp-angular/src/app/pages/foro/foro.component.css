@@ -1,0 +1,134 @@
+/* styles.css */
+main {
+    width: 90%; 
+    max-width: 740px; 
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    background-color: #f9f9f9;
+    box-shadow: -10px 0 10px -10px #000000;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+h2 {
+    color: #003366;
+}
+
+.crear-discusion, .discusiones, .discusion-contenido {
+    margin-bottom: 20px;
+}
+
+.crear-discusion form, .comentario-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.crear-discusion label, .comentario-form label {
+    margin-top: 10px;
+}
+
+.crear-discusion input[type="text"], .crear-discusion textarea, .comentario-form textarea {
+    padding: 8px;
+    margin-top: 5px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.crear-discusion button, .comentario-form button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #004d99;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.crear-discusion button:hover, .comentario-form button:hover {
+    background-color: #003366;
+}
+
+.discusiones ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.discusiones li {
+    margin-bottom: 10px;
+}
+
+.discusion-titulo {
+    font-size: 18px;
+    text-decoration: none;
+    color: #004d99;
+}
+
+.discusion-titulo:hover {
+    text-decoration: underline;
+}
+
+.discusion-resumen {
+    color: #666;
+}
+
+.comentarios p {
+    margin: 5px 0;
+}
+
+/* Estilos Responsive */
+
+@media (max-width: 768px) {
+    main {
+        width: 95%; 
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+
+    .crear-discusion input[type="text"], .crear-discusion textarea, .comentario-form textarea {
+        font-size: 14px; 
+        padding: 6px; 
+    }
+
+    .crear-discusion button, .comentario-form button {
+        padding: 10px; 
+        font-size: 16px; 
+    }
+
+    .discusion-titulo {
+        font-size: 16px; 
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        width: 100%;
+        padding: 10px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .crear-discusion input[type="text"], .crear-discusion textarea, .comentario-form textarea {
+        font-size: 14px;
+        padding: 5px;
+    }
+
+    .crear-discusion button, .comentario-form button {
+        padding: 8px; 
+        font-size: 14px;
+        width: 100%; 
+    }
+
+    .discusion-titulo {
+        font-size: 14px;
+    }
+
+    .comentarios p {
+        font-size: 14px;
+        padding: 10px;
+        background-color: #f0f0f0; 
+        border-radius: 4px;
+    }
+}

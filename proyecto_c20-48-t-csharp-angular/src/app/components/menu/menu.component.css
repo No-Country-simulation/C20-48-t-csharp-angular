@@ -13,6 +13,7 @@
 }
 
 .boton-menu {
+    font-family: "Poppins", sans-serif;
     background-color: transparent;
     border: 0;
     color: #fff;
@@ -22,6 +23,22 @@
     gap: 1rem;
     font-weight: 600;
     padding: 1rem;
+    font-size: .85rem;
+    width: 100%;
+}
+
+.boton-cerrar {
+    font-family: "Poppins", sans-serif;
+    background-color: transparent;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    text-align: left;
+    gap: 1rem;
+    font-weight: 600;
+    padding: 1rem;
+    margin-top: 100%;
     font-size: .85rem;
     width: 100%;
 }
@@ -50,7 +67,7 @@
 
 /* Media Queries para Responsive*/
 
-@media (max-width: 1050px) {
+@media (max-width: 1065px) {
     .hamburguesa {
         display: block;
     }

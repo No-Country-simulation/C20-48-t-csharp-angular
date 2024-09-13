@@ -21,6 +21,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Calendario2Component } from './pages/calendario2/calendario2.component';
 import { MateriasComponent } from './pages/materias/materias.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ForoComponent } from './pages/foro/foro.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     TareasComponent,
     AsideComponent,
     Calendario2Component,
-    MateriasComponent
+    MateriasComponent,
+    ForoComponent
   ],
   imports: [
     BrowserModule,

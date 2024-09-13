@@ -1,0 +1,61 @@
+
+<app-header></app-header>
+
+<nav>
+    <a href="#crear-discusion">Crear Discusión</a>
+    <a href="#discusiones">Discusiones</a>
+</nav>
+
+
+<main>
+<section id="crear-discusion" class="crear-discusion">
+    <h2>Iniciar Nueva Discusión</h2>
+    <form>
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" name="titulo" required>
+
+        <label for="contenido">Contenido:</label>
+        <textarea id="contenido" name="contenido" rows="5" required></textarea>
+
+        <button type="submit">Crear Discusión</button>
+    </form>
+</section>
+
+<section id="discusiones" class="discusiones">
+    <h2>Discusiones Actuales</h2>
+    <ul>
+        <li>
+            <a href="#discusion1" class="discusion-titulo">Discusión sobre la metodología de enseñanza</a>
+            <p class="discusion-resumen">Un debate sobre las mejores prácticas en la enseñanza.</p>
+        </li>
+        <li>
+            <a href="#discusion2" class="discusion-titulo">Uso de tecnología en el aula</a>
+            <p class="discusion-resumen">Cómo integrar herramientas tecnológicas en el aprendizaje.</p>
+        </li>
+        <!-- Más discusiones aquí -->
+    </ul>
+</section>
+
+<section id="discusion1" class="discusion-contenido">
+    <h2>Discusión sobre la metodología de enseñanza</h2>
+    <p>Contenido detallado de la discusión...</p>
+    <!-- Comentarios de la discusión -->
+    <form class="comentario-form">
+        <label for="comentario">Añadir Comentario:</label>
+        <textarea id="comentario" name="comentario" rows="3" required></textarea>
+        <button type="submit">Enviar Comentario</button>
+    </form>
+    <!-- Lista de comentarios -->
+    <div class="comentarios">
+        <p><strong>Profesor A:</strong> Este es un comentario sobre la metodología...</p>
+        <p><strong>Profesor B:</strong> Estoy de acuerdo con los puntos mencionados...</p>
+        <!-- Más comentarios aquí -->
+    </div>
+</section>
+
+<!-- Otras discusiones seguirán un patrón similar -->
+
+</main>
+
+<app-menu></app-menu>
+<app-footer></app-footer>

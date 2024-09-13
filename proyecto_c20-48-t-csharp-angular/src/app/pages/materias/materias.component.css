@@ -1,9 +1,10 @@
 .dashboard-container {
-    width: 740px;
+    width: 90%; /* Cambiado de un ancho fijo a un porcentaje */
+    max-width: 740px; /* Asegura que no sea más ancho de lo deseado */
     margin: 0 auto;
     padding: 20px;
-    margin-top: 120px;
-    margin-bottom: 120px;
+    margin-top: 80px;
+    margin-bottom: 80px;
     background-color: #f9f9f9;
     box-shadow: -10px 0 10px -10px #000000;
     border: 1px solid #ccc;
@@ -49,10 +50,11 @@ li::before{
     vertical-align: middle;
 }
 
-.action-buttons{
+.action-buttons {
     margin-top: 15px;
     display: flex;
-    gap: 154px;
+    justify-content: space-between; /* Distribuye mejor los botones */
+    gap: 10px; /* Aumenta el espacio entre botones */
 }
 
 .action-buttons button {
@@ -63,10 +65,7 @@ li::before{
     cursor: pointer;
     width: 159.99px;
     height: 51.19px;
-    top: 358.29px;
-    left: 822.61px;
-    gap: 0px;
-    opacity: 0px;
+    opacity: 1; /* Asegura que los botones sean visibles */
 }
 
 .latest-activities,
@@ -87,4 +86,62 @@ li::before{
     background-color: #CDDC39;
     height: 100%;
     border-radius: 10px;
+}
+
+/* Media queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    .dashboard-container {
+        padding: 15px;
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+
+    .action-buttons {
+        flex-direction: column; 
+        gap: 15px; 
+    }
+
+    .action-buttons button {
+        width: 100%; 
+    }
+
+    h2, h3 {
+        font-size: 22px; 
+    }
+
+    ul {
+        padding-left: 0; 
+    }
+
+    li, a {
+        font-size: 16px; 
+    }
+
+    .progress-bar {
+        height: 14px; 
+    }
+
+    .progress-section {
+        margin-top: 15px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard-container {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        padding: 10px;
+    }
+
+    h2, h3 {
+        font-size: 20px;
+    }
+
+    .action-buttons button {
+        height: 45px; 
+    }
+
+    .progress-bar {
+        height: 10px;
+    }
 }
