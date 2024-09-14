@@ -1,41 +1,32 @@
 <form (ngSubmit)="onLogin()" #loginForm="ngForm">
-
   <section class="login">
-    <h2>Iniciar sesión</h2>
-
-    <!-- Contenedor para los inputs y las imágenes -->
+    <h2 class="roboto-bold">Iniciar sesión</h2>
     <div class="input-container">
       <img class="input-icon" src="../../../assets/image/8fb00c34e87222967127ae3468afaabf.png" alt="Usuario">
-      <input type="text" id="username" name="username" [(ngModel)]="username" #usernameInput="ngModel" required
-        class="form-control" placeholder="Usuario">
+      <input type="text" id="username" name="username" [(ngModel)]="email" #usernameInput="ngModel" required
+        class="form-control" placeholder="Correo electrónico">
     </div>
-    <!-- Mensaje de error si el campo está vacío -->
-
     <div *ngIf="usernameInput.invalid && usernameInput.touched" class="error-message">
-        Nombre de usuario es requerida.
-      </div>
-
+      Nombre de usuario es requerida.
+    </div>
     <div class="input-container">
       <img class="input-icon" src="../../../assets/image/103a8041d743ae68762d3a7204903ed7.png" alt="Contraseña">
-      <input type="password" id="password" name="password" [(ngModel)]="password" #passwordInput="ngModel" required
+      <input type="password" id="password" name="password" [(ngModel)]="clave" #passwordInput="ngModel" required
         class="form-control" placeholder="Contraseña">
     </div>
-
-    <!-- Mensaje de error si el campo está vacío -->
-
     <div *ngIf="passwordInput.invalid && passwordInput.touched" class="error-message">
       La contraseña es requerida.
     </div>
-
-
     <div class="form-group">
       <label>
-        <input type="checkbox" [(ngModel)]="rememberMe" /> Recordar nombre de usuario
+        <input type="checkbox" [(ngModel)]="rememberMe" name="recuerdame"/> Recordar nombre de usuario
       </label>
     </div>
-    <button type="submit" [disabled]="loginForm.invalid" class="btn btn-primary">Ingresar</button>
-    <p class="login--cambio">Olvidaste tu contraseña?</p>
+    <button type="submit" [disabled]="loginForm.invalid" id="boton-enviar" class="btn btn-primary">Ingresar</button>
+    <div *ngIf="errorMensaje" class="error-message">{{errorMensaje}}</div>
+    <p class="login--cambio"  (click)="openRecuperarCorreo()">Olvidaste tu contraseña?</p>
+    <div>
+      <button (click)="navigateTo('registro')" type="submit" class="crear_cuenta_nueva">Crear cuenta nueva</button>
+    </div>
   </section>
-
 </form>
-<app-footer></app-footer>

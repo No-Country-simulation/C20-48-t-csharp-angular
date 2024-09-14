@@ -1,0 +1,112 @@
+<h2>Crear usuario</h2>
+<form (ngSubmit)="onSubmit()" #estudianteForm="ngForm">
+  <mat-form-field>
+    <input matInput placeholder="Correo" [(ngModel)]="registro.correo" name="correo" required>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Contraseña" [(ngModel)]="registro.password" name="password" type="password" required>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-select placeholder="Tipo de Rol" [(ngModel)]="registro.rol" name="rol" required #rol="ngModel">
+      <mat-option value="estudiante">Estudiante</mat-option>
+      <mat-option value="profesor">Profesor</mat-option>
+      <mat-option value="administrador">Administrador</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <button id="crearUsuario" mat-raised-button color="primary" type="submit">Crear usuario</button>
+
+  <ng-container *ngIf="registro.rol === 'profesor' || registro.rol === 'administrador'">
+    <h2>{{ getRol() }}</h2>
+    <form (ngSubmit)="onSubmit()" #estudianteForm="ngForm">
+      <mat-form-field appearance="fill">
+        <mat-label>Nombre Completo</mat-label>
+        <input matInput placeholder="Nombre Completo" [(ngModel)]="registro.nombreCompleto" name="nombreCompleto"
+          required>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Género</mat-label>
+        <mat-select [(ngModel)]="registro.genero" name="genero" required>
+          <mat-option value="masculino">Masculino</mat-option>
+          <mat-option value="femenino">Femenino</mat-option>
+          <mat-option value="otro">Otro</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Fecha de Nacimiento</mat-label>
+        <input matInput [matDatepicker]="picker" placeholder="Fecha de Nacimiento"
+          [(ngModel)]="registro.fechaNacimiento" name="fechaNacimiento" required>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Domicilio Completo</mat-label>
+        <textarea matInput placeholder="Domicilio Completo" [(ngModel)]="registro.domicilio" name="domicilio"
+          required></textarea>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Teléfono </mat-label>
+        <input matInput placeholder="Teléfono del Representante" [(ngModel)]="registro.telefono" name="telefono"
+          required>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Correo Electrónico</mat-label>
+        <input matInput placeholder="Correo Electrónico" [(ngModel)]="registro.correoadicional" name="correo"
+          type="email" required>
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit">Registrar</button>
+    </form>
+  </ng-container>
+
+</form>
+
+<ng-container *ngIf="registro.rol === 'estudiante'">
+  <h2>Registrar Estudiante</h2>
+  <form (ngSubmit)="onSubmit()" #estudianteForm="ngForm">
+    <mat-form-field appearance="fill">
+      <mat-label>Nombre Completo</mat-label>
+      <input matInput placeholder="Nombre Completo" [(ngModel)]="registro.nombreCompleto" name="nombreCompleto"
+        required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Género</mat-label>
+      <mat-select [(ngModel)]="registro.genero" name="genero" required>
+        <mat-option value="masculino">Masculino</mat-option>
+        <mat-option value="femenino">Femenino</mat-option>
+        <mat-option value="otro">Otro</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Fecha de Nacimiento</mat-label>
+      <input matInput [matDatepicker]="picker" placeholder="Fecha de Nacimiento" [(ngModel)]="registro.fechaNacimiento"
+        name="fechaNacimiento" required>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Domicilio Completo</mat-label>
+      <textarea matInput placeholder="Domicilio Completo" [(ngModel)]="registro.domicilio" name="domicilio"
+        required></textarea>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Nombre del Representante</mat-label>
+      <input matInput placeholder="Nombre del Representante" [(ngModel)]="registro.representante" name="representante"
+        required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Teléfono del Representante</mat-label>
+      <input matInput placeholder="Teléfono del Representante" [(ngModel)]="registro.telefonoRepresentante"
+        name="telefonoRepresentante" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Correo Electrónico</mat-label>
+      <input matInput placeholder="Correo Electrónico" [(ngModel)]="registro.correoadicional" name="correo" type="email"
+        required>
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Registrar</button>
+  </form>
+</ng-container>
+
