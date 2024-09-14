@@ -1,0 +1,147 @@
+.dashboard-container {
+    width: 90%; 
+    max-width: 740px; 
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    background-color: #f9f9f9;
+    box-shadow: -10px 0 10px -10px #000000;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.subject-summary {
+    margin-bottom: 20px;
+}
+
+.subject-summary h2{
+    color: #003366;
+    font-size: 27px;
+    margin-top: 7px;
+    margin-bottom: 25px;
+}
+
+h3{
+    color: #003366;
+    font-size: 24px;
+    margin-bottom: 22px;
+}
+
+ul{
+    list-style-type: none;
+}
+
+li, a{
+    margin-top: 10px;
+    padding-bottom: 2px;
+    color: #000000;
+    text-align: left;
+}
+
+li::before{
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background-color: #000;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.action-buttons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between; 
+    gap: 10px;
+}
+
+.action-buttons button {
+    background-color: #00a7e1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 159.99px;
+    height: 51.19px;
+    opacity: 1;
+}
+
+.latest-activities,
+.study-material,
+.progress-section {
+    margin-top: 20px;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #e0e0e0;
+    height: 18px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.progress {
+    background-color: #CDDC39;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/* Media queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    .dashboard-container {
+        padding: 15px;
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+
+    .action-buttons {
+        flex-direction: column; 
+        gap: 15px; 
+    }
+
+    .action-buttons button {
+        width: 100%; 
+    }
+
+    h2, h3 {
+        font-size: 22px; 
+    }
+
+    ul {
+        padding-left: 0; 
+    }
+
+    li, a {
+        font-size: 16px; 
+    }
+
+    .progress-bar {
+        height: 14px; 
+    }
+
+    .progress-section {
+        margin-top: 15px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard-container {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        padding: 10px;
+    }
+
+    h2, h3 {
+        font-size: 20px;
+    }
+
+    .action-buttons button {
+        height: 45px; 
+    }
+
+    .progress-bar {
+        height: 10px;
+    }
+}

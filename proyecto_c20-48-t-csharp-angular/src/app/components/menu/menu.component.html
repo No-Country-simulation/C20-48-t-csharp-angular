@@ -1,26 +1,45 @@
 <aside>
     <nav>
-        <div class="perfil">
-            <div class="foto-perfil">
-                <img src="../../../assets/image/user.jpg" alt="">
-            </div>
-        </div>
-        <ul class="menu">
+        <button class="hamburguesa" (click)="toggleMenu()">
+            <fa-icon [icon]="faBars"></fa-icon>
+        </button>
+        <ul class="menu" [class.menu-desplegado]="menuAbierto">
             <li>
-                <button class="boton-menu boton-categoria active">Perfíl</button>
+                <button class="boton-menu boton-categoria" routerLink="/alumno">
+                    <fa-icon [icon]="faHome"></fa-icon> Inicio
+                </button>
             </li>
             <li>
-                <button class="boton-menu boton-categoria">Calendario</button>
+                <button class="boton-menu boton-categoria active" routerLink="/perfil">
+                    <fa-icon [icon]="faUser"></fa-icon>Perfíl
+                </button>
             </li>
             <li>
-                <button class="boton-menu boton-categoria">Historial académico</button>
+                <button class="boton-menu boton-categoria" routerLink="/foro">
+                    <fa-icon [icon]="faUsers"></fa-icon>Foro
+                </button>
             </li>
             <li>
-                <button class="boton-menu boton-categoria">Calificaciones</button>
+                <button class="boton-menu boton-categoria" routerLink="/historial">
+                    <fa-icon [icon]="faHistory"></fa-icon>Historial académico
+                </button>
             </li>
             <li>
-                <button class="boton-menu boton-categoria">Mensajes</button>
+                <button class="boton-menu boton-categoria" routerLink="/calendario">
+                    <fa-icon [icon]="faCalendar"></fa-icon>Calendario
+                </button>
+            </li>
+            <li>
+                <button class="boton-menu boton-categoria" routerLink="/tareas">
+                    <fa-icon [icon]="faTasks"></fa-icon>Tareas
+                </button>
+            </li>
+            <li>
+                <button class="boton-cerrar boton-categoria" routerLink="/login">
+                    <fa-icon [icon]="faSignOutAlt"></fa-icon> Cerrar Sesión
+                </button>
             </li>
         </ul>
     </nav>
 </aside>
+

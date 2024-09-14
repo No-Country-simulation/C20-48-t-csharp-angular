@@ -1,8 +1,9 @@
 .main{
     width: 1050px;
-    margin: auto;
-    margin-top: 90px;
-    justify-content: center;
+    margin-top: 70px;
+    margin-left: 130px;
+    display: flex;
+    flex-direction: column;
 }
 
 .main article{
@@ -10,37 +11,44 @@
 }
 
 article{
-    width: 100%;
-    padding-bottom: 4px;
-    margin-bottom: 80px;
-    margin-left: 100px;
+    width: 849px;
+    height: auto;
+    margin-bottom: 40px;
     box-shadow: -10px 0 25px -10px #000000;
     border-radius: 20px;
     overflow: hidden;
     background-color: #fff;
+    display: flex;
+    flex-direction: column;
 }
 
 .title{
+    font-family: "Poppins", sans-serif;
     width: 200px;
     height: 42px;
-    font-size: 25px;
+    font-size: 18px;
     color: #003366;
-    margin-top: 2px;
-    margin-left: 100px;
     font-weight: 100;
+    margin: 15px;
+}
+
+.title p {
+    font-weight: 400;
+    font-size: 15px;
+    margin-top: 4px;
 }
 
 .search-form {
 	position: relative;
 	display: flex;
 	align-items: center;
-    margin-left: 100px;
+    left: 0;
     margin-bottom: 30px;
-	border: 2px solid #fff;
+	border: 2px solid #CAC4D0;
     border-radius: 5px;
 	background-color: #fff;
 	height: 32px;
-    width: 290px;
+    width: 260px;
 	overflow: hidden;
 }
 
@@ -50,69 +58,57 @@ article{
 	border: none;
     height: 32px;
 	width: 290px;
-	font-size: 1.4rem;
+	font-size: 16px;
 	padding: 0 2rem;
 	color: #555555;
-    background-color: #CAC4D0;
+    background-color: #fff;
 	cursor: pointer;
 }
 
 .container-materias{
-    height: 632px;
-    width: 100%;
+    height: auto;
+    width: 849px;
     max-width: 1400px;
-    top: 374px;
-    left: 161px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: auto;
 }
 
 .container-materias .card{
-    width: 220px;
-    height: 160px;
+    width: 260px;
+    height: 123px;
     border-radius: 12px;
     box-shadow: 0 5px 5px #CAC4D0;
     overflow: hidden;
-    margin: 20px;
+    margin: 10px;
     text-align: center;
     transition: all 0.25s;
     background-color: #E3E3E3;
-    ;
 }
 
 .container-materias .card:hover{
-    transform: translateY(-15px);
-    box-shadow: 0 12px 16px #676767;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 16px #676767;
 }
 
 .container-materias .card .materia{
-    width: 210px;
-    height: 120px;
-    background-color: #0080ff;
+    width: 100%;
+    height: 100px;
+    margin-top: 12px;
+    background-color: #A3ECF5;
     border-radius: 10px;
-    margin: 5px;
     text-align: center;
 }
 
-.container-materias .card .materia h1{
+.container-materias .card .materia button{
+    font-family: "Poppins", sans-serif;
     font-weight: 600;
-    padding-top: 50px;
-    color: #fff;
+    margin-top: 40px;
+    cursor: pointer;
+    color: #2f2e2e;
+    background-color: #A3ECF5;
+    border: none;
     font-size: 20px;
-}
-
-.container-materias .card h4{
-    font-weight: 600;
-    font-size: 20px;
-}
-
-.container-materias .card p{
-    padding: 0 1rem;
-    padding-top: 5px;
-    font-size: 16px;
-    font-weight: 300;
 }
 
 .menu-plataforma{
@@ -166,4 +162,100 @@ article{
     background-color: transparent;
     border-top-right-radius: .5rem;
     box-shadow: 0 -1rem 0 #003366;
+}
+
+/* Media Queries para Responsive*/
+
+@media (max-width: 600px) {
+    .main {
+        width: 100%;
+        padding: 0 10px;
+        margin: auto;
+        margin-top: 70px;
+    }
+
+    .title {
+        font-size: 18px;
+    }
+
+    .search-form {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .container-materias {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container-materias .card {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main {
+        margin: auto;
+        margin-top: 70px;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    article {
+        width: 100%;
+        align-items: center;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .search-form {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .container-materias {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .container-materias .card {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (min-width: 759px) {
+    .main {
+        width: 850px;
+        padding: 0;
+    }
+
+    article {
+        width: 100%;
+        align-items: center;
+    }
+
+    .container-materias {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .container-materias .card{
+        width: 100%;
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 1250px) {
+    .main{
+        margin: auto;
+        margin-top: 70px;
+    }
 }

@@ -1,0 +1,20 @@
+<p>listado-de-alumnos works!</p>
+<h2>Listado de Alumnos</h2>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Acción</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let alumno of alumnos">
+      <td>{{ alumno.id }}</td>
+      <td>{{ alumno.nombre }}</td>
+      <td>
+        <button (click)="navigateToNotas(alumno.id)">Agregar Notas</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

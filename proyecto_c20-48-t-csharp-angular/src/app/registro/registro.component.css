@@ -1,0 +1,25 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+
+h2 {
+  text-align: center;
+  margin: 28px 0px 20px;
+  font-size: 36px;
+}
+
+mat-form-field {
+  width: 30%;
+  display: block;
+  margin: 0 auto;
+}
+
+button {
+  margin-top: 20px;
+  display: block;
+  margin: 0 auto;
+}
+
+#crearUsuario {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

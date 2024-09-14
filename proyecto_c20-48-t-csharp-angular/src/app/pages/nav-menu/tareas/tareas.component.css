@@ -1,0 +1,16 @@
+.tareas{
+    width: 100%;
+    height: 590px;
+    padding-top: 180px;
+    text-align: center;
+}
+
+.sin-tareas img {
+    display: block;
+    margin: 0 auto;
+}
+
+.sin-tareas p{
+    width: 100%;
+    text-align: center;
+}

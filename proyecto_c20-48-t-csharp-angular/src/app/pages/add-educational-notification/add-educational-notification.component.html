@@ -1,0 +1,13 @@
+<p>Agregar división</p>
+<form (ngSubmit)="onSubmit()" #registroDivision="ngForm">
+  <mat-form-field>
+    <mat-label>Nombre de división</mat-label>
+    <input matInput [(ngModel)]="registro.division" name="division" type="text" required>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Nombre del profesor</mat-label>
+    <input matInput [(ngModel)]="registro.profesor" name="profesor" type="text" required>
+  </mat-form-field>
+  <button class="botonAceptar_cancelar" id="aceptar" mat-raised-button color="primary" type="submit">Aceptar</button>
+  <button class="botonAceptar_cancelar" id="cancelar" mat-raised-button color="primary" type="submit">Cancelar</button>
+</form>

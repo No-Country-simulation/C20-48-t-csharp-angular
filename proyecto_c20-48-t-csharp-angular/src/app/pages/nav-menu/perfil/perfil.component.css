@@ -1,0 +1,167 @@
+.card {
+    width: 100%;
+}
+
+.card-body {
+    height: auto;
+    width: 80%;
+    max-width: 1400px;
+    top: 374px;
+    left: 161px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    padding-top: 120px;
+    padding-bottom: 60px;
+}
+
+.form {
+    width: 80%;
+}
+
+.title{
+    width: 200px;
+    height: 42px;
+    font-size: 25px;
+    color: #003366;
+    margin-bottom: 20px;
+    margin-right: 800px;
+    font-weight: 100;
+    padding-bottom: 70px;
+}
+
+.title h4 {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.mb-2 {
+    display: flex;
+    flex-direction: column; 
+    margin-bottom: 30px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    background-color: #fff;
+    width: 100%;
+}
+
+.mb-2 .form-label {
+    color: #003366;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    padding-bottom: 8px;  
+}
+
+.mb-2 input {
+    padding: 0 1rem;
+    border-radius: 5px;
+    border: 1px solid #003366;
+    font-size: 20px;
+    font-family: Roboto;
+    font-weight: 300;
+    line-height: 23.44px;
+    height: 45px;
+}
+
+
+button {
+    height: auto;
+    width: 1000px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #00BCD4;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Media Queries para Responsive*/
+
+@media (max-width: 1250px) {
+
+    form {
+        width: 90%;
+    }
+
+    .mb-2, button {
+        max-width: 800px;
+    }
+
+    .title {
+        text-align: center;
+        margin-right: 0;
+    }
+
+    .mb-2 input {
+        font-size: 16px;
+    }
+
+    .title h4 {
+        font-size: 16px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    form {
+        width: 80%;
+    }
+    
+    .card-body {
+        padding-top: 80px;
+        text-align: center;
+    }
+
+    .mb-2, button {
+        max-width: 600px;
+        margin-left: 0;
+        padding: 5px;
+    }
+
+    .title {
+        text-align: center;
+        margin-right: 0;
+    }
+
+    .mb-2 input {
+        font-size: 16px;
+    }
+
+    .title h4 {
+        font-size: 16px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-body {
+        padding-top: 50px;
+        text-align: center;
+    }
+
+    .mb-2, button {
+        max-width: 100%;
+    }
+
+    .mb-2 input {
+        font-size: 14px;
+    }
+
+    .title h4 {
+        font-size: 14px;
+    }
+}

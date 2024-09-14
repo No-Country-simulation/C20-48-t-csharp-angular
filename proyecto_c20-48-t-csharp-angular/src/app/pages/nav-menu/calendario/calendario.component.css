@@ -1,0 +1,44 @@
+.calendar{
+    padding: 110px;
+}
+
+.calendario {
+    width: 822px;
+    height: 590px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* Media Queries para Responsive*/
+
+@media (max-width: 1200px) {
+    .calendario {
+        width: 700px;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .calendar {
+        padding: 50px;
+    }
+
+    .calendario {
+        width: 100%;
+        height: auto;
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .calendar {
+        padding: 20px;
+    }
+
+    .calendario {
+        width: 100%;
+        height: auto;
+    }
+}
