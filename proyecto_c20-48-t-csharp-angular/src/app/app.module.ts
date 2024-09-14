@@ -18,9 +18,6 @@ import { AlumnoComponent } from './pages/alumno/alumno.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { RegistroComponent } from './registro/registro.component';
 import { RecuperarCorreoComponent } from './recuperar-correo/recuperar-correo.component';
-
-
-
 // Importa los módulos de Angular Material
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -31,7 +28,6 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatTableModule } from '@angular/material/table';
 import { CommonModule } from '@angular/common';
-
 import { PerfilComponent } from './pages/nav-menu/perfil/perfil.component';
 import { CalendarioComponent } from './pages/nav-menu/calendario/calendario.component';
 import { HistorialAcademicoComponent } from './pages/nav-menu/historial-academico/historial-academico.component';
@@ -44,6 +40,9 @@ import { MenuProfesorComponent } from './pages/menu-profesor/menu-profesor.compo
 import { HistorialComponent } from './pages/historial/historial.component';
 import { ListadoDeAlumnosComponent } from './pages/listado-de-alumnos/listado-de-alumnos.component';
 import { NotasComponent } from './pages/notas/notas.component';
+import { MateriasComponent } from './pages/materias/materias.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ForoComponent } from './pages/foro/foro.component';
 
 @NgModule({
   declarations: [
@@ -70,7 +69,9 @@ import { NotasComponent } from './pages/notas/notas.component';
     MenuProfesorComponent,
     HistorialComponent,
     ListadoDeAlumnosComponent,
-    NotasComponent
+    NotasComponent,
+    MateriasComponent,
+    ForoComponent
   ],
   imports: [
     BrowserModule,
@@ -89,7 +90,9 @@ import { NotasComponent } from './pages/notas/notas.component';
     MatTableModule,
     CommonModule,
     ReactiveFormsModule,
-    FullCalendarModule
+    FullCalendarModule, BrowserAnimationsModule,
+    FontAwesomeModule
+
   ],
   providers: [LoginService], // se colocó el servicio dentro del providers
   bootstrap: [AppComponent]

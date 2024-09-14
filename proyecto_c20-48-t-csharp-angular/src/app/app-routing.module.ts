@@ -10,12 +10,14 @@ import { RegistroComponent } from './registro/registro.component';
 import { RecuperarCorreoComponent } from './recuperar-correo/recuperar-correo.component';
 import { AlumnoComponent } from './pages/alumno/alumno.component';
 import { PerfilComponent } from './pages/nav-menu/perfil/perfil.component';
-import { CalendarioComponent } from './pages/nav-menu/calendario/calendario.component'
-import { HistorialAcademicoComponent } from './pages/nav-menu/historial-academico/historial-academico.component'
-import { TareasComponent } from './pages/nav-menu/tareas/tareas.component'
+import { CalendarioComponent } from './pages/nav-menu/calendario/calendario.component';
+import { HistorialAcademicoComponent } from './pages/nav-menu/historial-academico/historial-academico.component';
+import { TareasComponent } from './pages/nav-menu/tareas/tareas.component';
 import { ProfesorComponent } from './pages/profesor/profesor.component';
 import { ListadoDeAlumnosComponent } from './pages/listado-de-alumnos/listado-de-alumnos.component';
 import { NotasComponent } from './pages/notas/notas.component';
+import { MateriasComponent } from './pages/materias/materias.component';
+import { ForoComponent } from './pages/foro/foro.component';
 
 const routes: Routes = [
   { path: '', component: LoginFormComponent },
@@ -33,7 +35,9 @@ const routes: Routes = [
   { path: 'tareas', component: TareasComponent },
   { path: 'profesor', component: ProfesorComponent },
   { path: 'listado-de-alumnos', component: ListadoDeAlumnosComponent },
-  { path: 'notas', component: NotasComponent }
+  { path: 'notas', component: NotasComponent },
+  {path: 'materias' , component: MateriasComponent},
+  {path: 'foro' , component: ForoComponent}
   // { path: '', redirectTo: '/virtual-computers', pathMatch: 'full' },
 
 ];
