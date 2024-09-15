@@ -1,0 +1,99 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #004d99;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+main {
+    margin-left: 315px;
+   
+}
+
+.crear-discusion, .discusiones, .discusion-contenido {
+    margin-bottom: 20px;
+}
+
+.crear-discusion form, .comentario-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.crear-discusion label, .comentario-form label {
+    margin-top: 10px;
+}
+
+.crear-discusion input[type="text"], .crear-discusion textarea, .comentario-form textarea {
+    padding: 8px;
+    margin-top: 5px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.crear-discusion button, .comentario-form button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #004d99;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.crear-discusion button:hover, .comentario-form button:hover {
+    background-color: #003366;
+}
+
+.discusiones ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.discusiones li {
+    margin-bottom: 10px;
+}
+
+.discusion-titulo {
+    font-size: 18px;
+    text-decoration: none;
+    color: #004d99;
+}
+
+.discusion-titulo:hover {
+    text-decoration: underline;
+}
+
+.discusion-resumen {
+    color: #666;
+}
+
+.comentarios p {
+    margin: 5px 0;
+}
+
+footer {
+    background-color: #004d99;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}

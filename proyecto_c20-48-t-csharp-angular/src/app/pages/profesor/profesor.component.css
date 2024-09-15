@@ -1,47 +1,12 @@
-nav {
-    height: 66px;
-    width: 100%;
-    position: fixed;
-    display: flex;
-    align-items: flex-end;
-    top: 0;
-    left: 0;
-    background: #003366;
-
-}
-
-h1 {
-    color: #fff;
-    font-size: xx-large;
-    font-weight: 300px;
-    margin-left: 64rem;
-    margin-bottom: 20px;
-    font-size: 24px;
-    display: flex;
-    align-items: end;
-    justify-content: end;
-}
-
-
-
-.llaveImg {
-    width: 25px;
-    height: 25px;
-    display: inline-block;
-    margin-bottom: 6px;
-    margin-left: 10px;
-
-}
-
 
 /* informacion de las materias que da el profesor */
 
 
 .main {
-    width: 1050px;
+    width: 60%;
     margin: auto;
-    margin-top: 70px;
-    justify-content: center;
+    /* margin-top: 70px; */
+    /* justify-content: center; */
 }
 
 .main article {

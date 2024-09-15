@@ -1,0 +1,49 @@
+<app-menu-profesor></app-menu-profesor>
+
+<div class="container">
+   
+    <!-- Mensaje de feedback general -->
+    <div *ngIf="mensajeFeedback"
+        [ngClass]="{'alert': true, 'alert-success': feedbackExitoso, 'alert-danger': !feedbackExitoso}" role="alert">
+        {{ mensajeFeedback }}
+    </div>
+
+    <table class="table" *ngIf="mostrar">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Calificación</th>
+                <th>Feedback del Profesor</th>
+                <th>Acción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let estudiante of listaEstudiantes; let i = index">
+                <td>{{i+1}}</td>
+                <td>{{estudiante.nombre}}</td>
+                <td>
+                    <select [(ngModel)]="estudiante.estado" (change)="marcarCambios()">
+                        <option value="excento">Excento</option>
+                        <option value="reprobado">Reprobado</option>
+                        <option value="regular">Regular</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" class="form-control" [(ngModel)]="estudiante.feedback"
+                        placeholder="Escribe un feedback..." (input)="marcarCambios()" />
+                </td>
+                <td>
+                    <button class="btn btn-primary" (click)="guardarCambiosEstudiante(i)">Guardar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3 *ngIf="listaEstudiantes.length === 0">No hay registros para mostrar</h3>
+</div>
+
+<div class="content">
+    <button class="btn btn-primary ml-auto" (click)="toggle()">Ocultar</button>
+</div>
+<br>

@@ -40,6 +40,15 @@ import { MenuProfesorComponent } from './pages/menu-profesor/menu-profesor.compo
 import { HistorialComponent } from './pages/historial/historial.component';
 import { ListadoDeAlumnosComponent } from './pages/listado-de-alumnos/listado-de-alumnos.component';
 import { NotasComponent } from './pages/notas/notas.component';
+import { ListadoAlumnoAComponent } from './pages/listado-alumno-a/listado-alumno-a.component';
+import { ListadoalumnosBComponent } from './pages/listadoalumnos-b/listadoalumnos-b.component';
+import { ListadoalumnosCComponent } from './pages/listadoalumnos-c/listadoalumnos-c.component';
+import { CalendarioProfesorComponent } from './pages/calendario-profesor/calendario-profesor.component';
+import { PerfilProfesorComponent } from './pages/perfil-profesor/perfil-profesor.component';
+import { HeaderPorofesorComponent } from './pages/header-porofesor/header-porofesor.component';
+import { ForoProfesorComponent } from './pages/foro-profesor/foro-profesor.component';
+import { TareasProfesorComponent } from './pages/tareas-profesor/tareas-profesor.component';
+import { HeaderAdministradorComponent } from './adm/header-administrador/header-administrador.component';
 import { MateriasComponent } from './pages/materias/materias.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ForoComponent } from './pages/foro/foro.component';
@@ -70,6 +79,15 @@ import { ForoComponent } from './pages/foro/foro.component';
     HistorialComponent,
     ListadoDeAlumnosComponent,
     NotasComponent,
+    ListadoAlumnoAComponent,
+    ListadoalumnosBComponent,
+    ListadoalumnosCComponent,
+    CalendarioProfesorComponent,
+    PerfilProfesorComponent,
+    HeaderPorofesorComponent,
+    ForoProfesorComponent,
+    TareasProfesorComponent,
+    HeaderAdministradorComponent,
     MateriasComponent,
     ForoComponent
   ],

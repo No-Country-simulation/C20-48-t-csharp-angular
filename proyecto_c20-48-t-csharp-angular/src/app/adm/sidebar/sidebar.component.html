@@ -1,66 +1,24 @@
-
 <section class="administrador">
-  <aside class="admin-sidebar">
+  <section class="admin-sidebar">
     <h2>Admin Panel</h2>
-    <div class="button-group">      
-      <button class="boton-menu boton-categoria" routerLink="/gestion-usuario">Gestion usuario</button>
-      <button class="boton-menu boton-categoria" routerLink="/virtual-computers">Administrar materias</button>
-      <button class="boton-menu boton-categoria" routerLink="/add-educational-notification">Administrar división</button>
+    <div class="button-group">
+      <ul>
+        <li>
+          <button class="boton-menu boton-categoria" routerLink="/gestion-usuario"><img class="imagen-perfil"
+              src="../../../assets/image/home.png">Inicio</button>
+        </li>
+        
+        <li><button class="boton-menu boton-categoria" routerLink="/virtual-computers"><img class="imagen-perfil"
+              src="../../../assets/image/tareas.png">Administrar materias</button>
+        </li>
+        <li><button class="boton-menu boton-categoria" routerLink="/gestion-usuario"><img class="imagen-perfil"
+          src="../../../assets/image/usuario-sinfondo.png">Gestion usuario</button></li>
+        <li><button class="boton-menu boton-categoria" routerLink="/add-educational-notification"><img
+              class="imagen-perfil" src="../../../assets/image/administrar-divisor.png">Administrar
+            división</button></li>
+
+
+      </ul>
     </div>
-  </aside>
-
-  <section class="contenido">
-    <ng-container [ngSwitch]="currentView">
-      <ng-container *ngSwitchCase="'virtual-computers'">
-        <p>Agregar materias</p>
-      </ng-container>
-
-      <ng-container *ngSwitchCase="'gestion-usuario'">
-        <button class="añadirUsuario" (click)="navigateTo('registro')">Añadir usuario</button>
-
-          <h2>Gestión de Usuarios</h2>
-          <table mat-table [dataSource]="usuarios" class="mat-elevation-z8">
-
-            <!-- Nombre Column -->
-            <ng-container matColumnDef="nombre">
-              <th mat-header-cell *matHeaderCellDef> Nombre </th>
-              <td mat-cell *matCellDef="let usuario"> {{usuario.nombre}} </td>
-            </ng-container>
-
-            <!-- Correo Column -->
-            <ng-container matColumnDef="correo">
-              <th mat-header-cell *matHeaderCellDef> Correo </th>
-              <td mat-cell *matCellDef="let usuario"> {{usuario.correo}} </td>
-            </ng-container>
-
-            <!-- Tipo Column -->
-            <ng-container matColumnDef="tipo">
-              <th mat-header-cell *matHeaderCellDef> Tipo Usuario </th>
-              <td mat-cell *matCellDef="let usuario"> {{usuario.tipo}} </td>
-            </ng-container>
-
-            <!-- Actions Column -->
-            <ng-container matColumnDef="actions">
-              <th mat-header-cell *matHeaderCellDef> Acciones </th>
-              <td mat-cell *matCellDef="let usuario">
-                <button class="modificar" mat-button (click)="modifyUser(usuario)">Modificar</button>
-                <button class="eliminar" mat-button (click)="deleteUser(usuario)">Eliminar</button>
-              </td>
-            </ng-container>
-            s
-            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-          </table>
-        </ng-container>
-
-        <ng-container *ngSwitchCase="'add-educational-notification'">
-          <p>Agregar División</p>
-        </ng-container>
-
-        <ng-container *ngSwitchDefault>
-          <p>Selecciona una opción del menú.</p>
-        </ng-container>
-      </ng-container>
-
   </section>
 </section>
