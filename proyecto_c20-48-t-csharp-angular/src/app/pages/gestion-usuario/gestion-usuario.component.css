@@ -1,69 +1,81 @@
-section{
-margin-left: 20px;
 
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
 }
 
+section {
+  width: 100%;
+  height: 100%;
+  margin-left: 284px;
+}
 
-button {
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.button-container {
+  margin-bottom: 20px;
+}
+
+.btn {
   width: 188px;
   height: 42px;
-  font-size: 20px;
+  font-size: 16px;
   color: #FFFFFF;
   margin-right: 5px;
-  border:none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.añadirUsuario {
+  background-color: #CDDC39;
+}
+
+.añadirUsuario:hover {
+  background-color: #b3b300;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  text-align: justify;
+  text-align: left;
 }
 
-th,
-td {
+th, td {
   padding: 10px;
   border: 1px solid #ddd;
 }
 
-th{
+th {
   background-color: #00BCD4;
   color: #FFFFFF;
-  font-size: 24px;
-  width: 89px;
-  height: 24px;
-  font-family: Roboto;
-  line-height: 24px;
-
+  font-size: 18px;
 }
 
+td {
+  font-size: 16px;
+}
 
 .botonmodificar-eliminar {
   background-color: orange;
   color: white;
-  border: none;
-  padding: 10px;  
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 1em;
+  font-size: 16px;
 }
 
-button:hover {
+.btn-eliminar {
+  background-color: red;
+}
+
+.btn:hover {
   background-color: #0056b3;
 }
 
-/* Estilos para el botón Eliminar */
-#eliminar {
-  background-color: red;
-  color: white;
-}
-
-h2 {
-  margin-bottom: 20px;
-}
-.añadirUsuario{
-  background-color: #CDDC39;
-  width: 173px;
-  height: 42px;
-  margin-bottom: 20px;
-  margin-right: 20px;
+.btn-eliminar:hover {
+  background-color: #cc0000;
 }

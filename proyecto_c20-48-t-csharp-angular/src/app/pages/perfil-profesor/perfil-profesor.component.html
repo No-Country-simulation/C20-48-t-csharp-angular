@@ -1,0 +1,73 @@
+<app-header-porofesor></app-header-porofesor>
+
+<div class="card">
+    <div class="card-body">
+
+        <div class="title">
+            <h3>Mis datos</h3>
+            <h4>General</h4>
+        </div>
+
+        <!-- Formulario reactivo -->
+        <form [formGroup]="perfilForm" (ngSubmit)="onSubmit()">
+            <div class="mb-2">
+                <label class="form-label">
+                    Nombre:
+                </label>
+                <input type="text" class="form-control" formControlName="nombre" placeholder="Por favor ingrese su nombre">
+                <div *ngIf="campoInvalido('nombre')" class="text-danger">
+                    El nombre es obligatorio y debe tener al menos 2 caracteres.
+                </div>
+            </div>
+
+            <div class="mb-2">
+                <label class="form-label">
+                    Apellido:
+                </label>
+                <input type="text" class="form-control" formControlName="apellido" placeholder="Por favor ingrese su apellido">
+                <div *ngIf="campoInvalido('apellido')" class="text-danger">
+                    El apellido es obligatorio y debe tener al menos 2 caracteres.
+                </div>
+            </div>
+
+            <div class="mb-2">
+                <label class="form-label">
+                    Dirección de correo:
+                </label>
+                <input type="email" class="form-control" formControlName="email" placeholder="Por favor ingrese su correo">
+                <div *ngIf="campoInvalido('email')" class="text-danger">
+                    Ingrese un correo válido.
+                </div>
+            </div>
+
+            <div class="mb-2">
+                <label class="form-label">
+                    Ciudad:
+                </label>
+                <input type="text" class="form-control" formControlName="ciudad" placeholder="Por favor ingrese su ciudad">
+                <div *ngIf="campoInvalido('ciudad')" class="text-danger">
+                    La ciudad es obligatoria.
+                </div>
+            </div>
+
+            <div class="mb-2">
+                <label class="form-label">
+                    País:
+                </label>
+                <input type="text" class="form-control" formControlName="pais" placeholder="Por favor ingrese su país">
+                <div *ngIf="campoInvalido('pais')" class="text-danger">
+                    El país es obligatorio.
+                </div>
+            </div>
+
+            <!-- Botón de enviar, desactivado si el formulario no es válido -->
+            <button class="btn btn-primary" type="submit" [disabled]="perfilForm.invalid">
+                Guardar Cambios
+            </button>
+
+        </form>
+    </div>
+</div>
+
+<app-menu-profesor></app-menu-profesor>
+<app-footer></app-footer>

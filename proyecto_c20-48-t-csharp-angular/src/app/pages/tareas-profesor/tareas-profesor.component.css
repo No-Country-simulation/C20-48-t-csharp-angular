@@ -1,0 +1,47 @@
+.seccionForo {
+    width: 100%;
+    height: 100%; /* Asegura que la sección ajuste su altura automáticamente */
+    padding: 20px; /* Añade un poco de espacio alrededor del contenido */
+    box-sizing: border-box; /* Asegura que el padding y border se incluyan en el ancho total */
+}
+
+
+.foto{
+    width: 100%;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.botonForo {
+    width: 135px; /* Tamaño fijo para los botones */
+    height: 28px; /* Tamaño fijo para los botones */
+    border-radius: 28px; /* Bordes redondeados */
+    padding: 0 16px; /* Espacio interno */
+    margin-top: 20px; /* Espacio alrededor de los botones */
+    font-size: 14px; /* Tamaño de la fuente */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    display: inline-block;
+    background-color: #CDDC39;
+}
+
+
+.botonForo {
+    margin-left: 261px; /* Ajusta el margen izquierdo para alinear los botones si es necesario */
+}
+
+.imagen-contenido {
+    text-align: center; /* Centra el contenido dentro de esta sección */
+    margin-top: 20px; /* Espacio superior para separar del contenido superior */
+}
+
+.imagenForo {
+    max-width: 100%; /* Ajusta el ancho de la imagen para que no se desborde del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+#texto {
+    margin-top: 20px; /* Espacio superior para separar el párrafo de la imagen */
+    font-size: 16px; /* Tamaño de la fuente del párrafo */
+    line-height: 1.5; /* Altura de línea para mejor legibilidad */
+    text-align: center; /* Centra el texto */
+}
