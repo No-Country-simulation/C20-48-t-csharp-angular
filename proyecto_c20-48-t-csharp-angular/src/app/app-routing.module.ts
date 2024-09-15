@@ -10,9 +10,9 @@ import { RegistroComponent } from './registro/registro.component';
 import { RecuperarCorreoComponent } from './recuperar-correo/recuperar-correo.component';
 import { AlumnoComponent } from './pages/alumno/alumno.component';
 import { PerfilComponent } from './pages/nav-menu/perfil/perfil.component';
-import { CalendarioComponent } from './pages/nav-menu/calendario/calendario.component'
-import { HistorialAcademicoComponent } from './pages/nav-menu/historial-academico/historial-academico.component'
-import { TareasComponent } from './pages/nav-menu/tareas/tareas.component'
+import { CalendarioComponent } from './pages/nav-menu/calendario/calendario.component';
+import { HistorialAcademicoComponent } from './pages/nav-menu/historial-academico/historial-academico.component';
+import { TareasComponent } from './pages/nav-menu/tareas/tareas.component';
 import { ProfesorComponent } from './pages/profesor/profesor.component';
 import { ListadoDeAlumnosComponent } from './pages/listado-de-alumnos/listado-de-alumnos.component';
 import { ListadoAlumnoAComponent } from './pages/listado-alumno-a/listado-alumno-a.component';
@@ -24,6 +24,8 @@ import { PerfilProfesorComponent } from './pages/perfil-profesor/perfil-profesor
 import { ForoProfesorComponent } from './pages/foro-profesor/foro-profesor.component';
 import { TareasProfesorComponent } from './pages/tareas-profesor/tareas-profesor.component';
 import { HeaderAdministradorComponent } from './adm/header-administrador/header-administrador.component';
+import { MateriasComponent } from './pages/materias/materias.component';
+import { ForoComponent } from './pages/foro/foro.component';
 
 const routes: Routes = [
   { path: '', component: LoginFormComponent },
@@ -49,8 +51,10 @@ const routes: Routes = [
   { path: 'perfil-profesor', component: PerfilProfesorComponent },
   { path: 'foro-profesor', component: ForoProfesorComponent },
   { path: 'tareas-profesor', component: TareasProfesorComponent },
-  { path: 'header-administrador', component: HeaderAdministradorComponent }
+  { path: 'header-administrador', component: HeaderAdministradorComponent },
 
+  {path: 'materias' , component: MateriasComponent},
+  {path: 'foro' , component: ForoComponent}
   // { path: '', redirectTo: '/virtual-computers', pathMatch: 'full' },
 
 ];

@@ -18,9 +18,6 @@ import { AlumnoComponent } from './pages/alumno/alumno.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { RegistroComponent } from './registro/registro.component';
 import { RecuperarCorreoComponent } from './recuperar-correo/recuperar-correo.component';
-
-
-
 // Importa los módulos de Angular Material
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -31,7 +28,6 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatTableModule } from '@angular/material/table';
 import { CommonModule } from '@angular/common';
-
 import { PerfilComponent } from './pages/nav-menu/perfil/perfil.component';
 import { CalendarioComponent } from './pages/nav-menu/calendario/calendario.component';
 import { HistorialAcademicoComponent } from './pages/nav-menu/historial-academico/historial-academico.component';
@@ -53,6 +49,9 @@ import { HeaderPorofesorComponent } from './pages/header-porofesor/header-porofe
 import { ForoProfesorComponent } from './pages/foro-profesor/foro-profesor.component';
 import { TareasProfesorComponent } from './pages/tareas-profesor/tareas-profesor.component';
 import { HeaderAdministradorComponent } from './adm/header-administrador/header-administrador.component';
+import { MateriasComponent } from './pages/materias/materias.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ForoComponent } from './pages/foro/foro.component';
 
 @NgModule({
   declarations: [
@@ -88,7 +87,9 @@ import { HeaderAdministradorComponent } from './adm/header-administrador/header-
     HeaderPorofesorComponent,
     ForoProfesorComponent,
     TareasProfesorComponent,
-    HeaderAdministradorComponent
+    HeaderAdministradorComponent,
+    MateriasComponent,
+    ForoComponent
   ],
   imports: [
     BrowserModule,
@@ -107,7 +108,9 @@ import { HeaderAdministradorComponent } from './adm/header-administrador/header-
     MatTableModule,
     CommonModule,
     ReactiveFormsModule,
-    FullCalendarModule
+    FullCalendarModule, BrowserAnimationsModule,
+    FontAwesomeModule
+
   ],
   providers: [LoginService], // se colocó el servicio dentro del providers
   bootstrap: [AppComponent]

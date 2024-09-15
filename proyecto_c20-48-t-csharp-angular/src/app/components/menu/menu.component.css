@@ -1,5 +1,5 @@
 .menu {
-    width: 120px;
+    width: 130px;
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -13,6 +13,7 @@
 }
 
 .boton-menu {
+    font-family: "Poppins", sans-serif;
     background-color: transparent;
     border: 0;
     color: #fff;
@@ -20,22 +21,76 @@
     display: flex;
     text-align: left;
     gap: 1rem;
-    top: 0;
-    left: 0;
     font-weight: 600;
-    padding: 1rem;
+    padding: .5rem;
     font-size: .85rem;
     width: 100%;
-    height: auto;
+}
+
+.boton-cerrar {
+    font-family: "Poppins", sans-serif;
+    background-color: transparent;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    text-align: left;
+    gap: 1rem;
+    font-weight: 600;
+    padding: 1rem;
+    margin-top: 100%;
+    font-size: .85rem;
+    width: 100%;
+}
+
+.fa-icon {
+    font-size: 1.2rem;
 }
 
 .boton-menu:hover {
     background-color: #0080ff;
     color: #fff;
-    width: 100%;
-    position: relative;
 }
 
-ul{
-    list-style-type: none;
+.hamburguesa {
+    display: none;
+    font-size: 30px;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 10px;
+    z-index: 4;
+}
+
+/* Media Queries para Responsive*/
+
+@media (max-width: 1065px) {
+    .hamburguesa {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 130px;
+        background-color: #003366;
+        padding-bottom: 100%;
+    }
+
+    .menu.menu-desplegado {
+        display: flex;
+        position: fixed;
+        left: 0;
+        top: 66px;
+        width: 130px;
+        height: auto;
+        background-color: #003366;
+        flex-direction: column;
+        z-index: 3;
+    }
 }

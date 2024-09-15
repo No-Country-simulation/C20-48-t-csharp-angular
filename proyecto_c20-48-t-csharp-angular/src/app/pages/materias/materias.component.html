@@ -1,0 +1,43 @@
+<div class="dashboard-container">
+    <!-- Resumen de la materia -->
+    <div class="subject-summary">
+      <h2>Resumen de la materia</h2>
+      <p>En esta materia aprenderás los conceptos fundamentales de matemáticas, incluyendo álgebra, geometría y cálculo.</p>
+      <div class="action-buttons">
+        <button (click)="entregarTarea()">Entregar tarea</button>
+        <button (click)="verCalificaciones()">Ver calificaciones</button>
+        <button routerLink="/foro" (click)="foroDeDiscusion()">Foro de discusión</button>
+      </div>
+    </div>
+  
+    <!-- Últimas actividades -->
+    <div class="latest-activities">
+      <h3>Últimas actividades</h3>
+      <ul>
+        <li>Tarea 1: Ecuaciones lineales (Fecha límite: 5 de septiembre)</li>
+        <li>Examen parcial 1: Geometría (Fecha: 10 de septiembre)</li>
+      </ul>
+    </div>
+  
+    <!-- Material de estudio -->
+    <div class="study-material">
+      <h3>Material de estudio</h3>
+      <ul>
+        <li><a href="#">Documento: Álgebra básica</a></li>
+        <li><a href="#">Video: Introducción a las derivadas</a></li>
+      </ul>
+    </div>
+  
+    <!-- Progreso -->
+    <div class="progress-section">
+      <h3>Progreso</h3>
+      <div class="progress-bar">
+        <div class="progress" [style.width]="progreso + '%'"></div>
+      </div>
+      <p>{{ progreso }}% Completado</p>
+    </div>
+  </div>
+  
+  <app-header></app-header>
+  <app-menu></app-menu>
+  <app-footer></app-footer>

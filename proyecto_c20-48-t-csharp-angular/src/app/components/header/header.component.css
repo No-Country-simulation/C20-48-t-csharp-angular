@@ -2,18 +2,23 @@ nav {
     height: 66px;
     width: 100%;
     position: fixed;
-    display: flex;
-    align-items: flex-end;
+    padding: 10px;
     top: 0;
     left: 0;
     background: #003366;
     z-index: 2;
 }
 
+.logo{
+    text-align: end;
+    margin-right: 20px;
+}
+
 h1{
     color: #fff;
+    font-family: "Style Script", cursive;
+    font-weight: 400;
+    font-style: normal;
     font-size: xx-large;
-    font-weight: 300px;
-    margin-left: 64rem;
     margin-bottom: 20px;
 }
