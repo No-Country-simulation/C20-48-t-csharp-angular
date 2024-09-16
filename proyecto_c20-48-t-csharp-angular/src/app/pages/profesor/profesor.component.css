@@ -1,119 +1,119 @@
-
 /* informacion de las materias que da el profesor */
 
 
 .main {
-    width: 60%;
-    margin: auto;
-    margin-top: 70px;
-    justify-content: center;
+  width: 60%;
+  margin: auto;
+  margin-top: 70px;
+  justify-content: center;
 }
 
 .main article {
-    text-align: center;
+  text-align: center;
 }
 
 article {
-    width: 849px;
-    height: auto;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-bottom: 40px;
-    /* margin-left: auto; */
-    margin-right: auto;
-    box-shadow: -10px 0 25px -10px #000000;
-    border-radius: 20px;
-    overflow: hidden;
-    background-color: #fff;
+  width: 849px;
+  height: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 40px;
+  /* margin-left: auto; */
+  margin-right: auto;
+  box-shadow: -10px 0 25px -10px #000000;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #fff;
 }
 
-.title{
-    font-family: "Poppins", sans-serif;
-    width: 200px;
-    height: 42px;
-    font-size: 18px;
-    color: #003366;
-    font-weight: 100;
-    margin: 15px;
+.title {
+  font-family: "Poppins", sans-serif;
+  width: 200px;
+  height: 42px;
+  font-size: 18px;
+  color: #003366;
+  font-weight: 100;
+  margin: 15px;
 }
 
 .title p {
-    font-weight: 400;
-    font-size: 15px;
-    margin-top: 4px;
+  font-weight: 400;
+  font-size: 15px;
+  margin-top: 4px;
 }
 
 
 .search-form {
-    position: relative;
-    display: flex;
-    align-items: center;
-    left: 0;
-    margin-bottom: 30px;
-    border: 2px solid #CAC4D0;
-    border-radius: 5px;
-    background-color: #fff;
-    height: 32px;
-    width: 260px;
-    overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  left: 0;
+  margin-bottom: 30px;
+  border: 2px solid #CAC4D0;
+  border-radius: 5px;
+  background-color: #fff;
+  height: 32px;
+  width: 260px;
+  overflow: hidden;
 }
 
 .search-form input {
-    outline: none;
-    font-family: inherit;
-    border: none;
-    height: 32px;
-    width: 290px;
-    font-size: 16px;
-    padding: 0 2rem;
-    color: #555555;
-    background-color: #fff;
-    cursor: pointer;
+  outline: none;
+  font-family: inherit;
+  border: none;
+  height: 32px;
+  width: 290px;
+  font-size: 16px;
+  padding: 0 2rem;
+  color: #555555;
+  background-color: #fff;
+  cursor: pointer;
 }
 
 .container-materias {
-    height: 100%;
-    width: 100%;
-    flex-wrap: wrap;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;;
+  height: 100%;
+  width: 100%;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  ;
 }
 
 .container-materias .card {
-    width: 260px;
-    height: 123px;
-    border-radius: 12px;
-    box-shadow: 0 5px 5px #CAC4D0;
-    overflow: hidden;
-    margin: 10px;
-    text-align: center;
-    transition: all 0.25s;
-    background-color: #E3E3E3;
-    border: none;
-    cursor: pointer
+  width: 260px;
+  height: 123px;
+  border-radius: 12px;
+  box-shadow: 0 5px 5px #CAC4D0;
+  overflow: hidden;
+  margin: 10px;
+  text-align: center;
+  transition: all 0.25s;
+  background-color: #E3E3E3;
+  border: none;
+  cursor: pointer
 }
 
 .container-materias .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 16px #676767;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 16px #676767;
 }
 
 .container-materias .card .materia {
-    width: 250px;
-    height: 100px;
-    margin-top: 12px;
-    background-color: #A3ECF5;
-    border-radius: 10px;
-    margin: 5px;
-    text-align: center;
+  width: 250px;
+  height: 100px;
+  margin-top: 12px;
+  background-color: #A3ECF5;
+  border-radius: 10px;
+  margin: 5px;
+  text-align: center;
 }
 
 .container-materias .card .materia h2 {
-    font-weight: 600;
-    padding-top: 30px;
-    color: #2f2e2e;
-    font-size: 20px;
+  font-weight: 600;
+  padding-top: 30px;
+  color: #2f2e2e;
+  font-size: 20px;
 }
 
 /* .container-materias .card h4 {
@@ -122,66 +122,73 @@ article {
 } */
 
 .container-materias .card p {
-    padding: 0 1rem;
-    padding-top: 5px;
-    font-size: 16px;
-    font-weight: 300;
+  padding: 0 1rem;
+  padding-top: 5px;
+  font-size: 16px;
+  font-weight: 300;
 }
 
 .menu-plataforma {
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
 }
 
 .boton-menu {
-    background-color: transparent;
-    border: 0;
-    color: #003366;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    font-weight: 600;
-    padding: 1.25rem;
-    font-size: 1.45rem;
-    width: 100%;
+  background-color: transparent;
+  border: 0;
+  color: #003366;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 600;
+  padding: 1.25rem;
+  font-size: 1.45rem;
+  width: 100%;
 }
 
 .boton-menu.active {
-    background-color: #003366;
-    color: #fff;
-    width: 100%;
-    border-top-left-radius: 1rem;
-    border-bottom-left-radius: 1rem;
-    position: relative;
+  background-color: #003366;
+  color: #fff;
+  width: 100%;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  position: relative;
 }
 
 .boton-menu.active::before {
-    content: '';
-    position: absolute;
-    width: 1rem;
-    height: 2rem;
-    bottom: 100%;
-    right: 0;
-    background-color: transparent;
-    border-bottom-right-radius: .5rem;
-    box-shadow: 0 1rem 0 #003366;
+  content: '';
+  position: absolute;
+  width: 1rem;
+  height: 2rem;
+  bottom: 100%;
+  right: 0;
+  background-color: transparent;
+  border-bottom-right-radius: .5rem;
+  box-shadow: 0 1rem 0 #003366;
 }
 
 .boton-menu.active::after {
-    content: '';
-    position: absolute;
-    width: 1rem;
-    height: 2rem;
-    top: 100%;
-    right: 0;
-    background-color: transparent;
-    border-top-right-radius: .5rem;
-    box-shadow: 0 -1rem 0 #003366;
+  content: '';
+  position: absolute;
+  width: 1rem;
+  height: 2rem;
+  top: 100%;
+  right: 0;
+  background-color: transparent;
+  border-top-right-radius: .5rem;
+  box-shadow: 0 -1rem 0 #003366;
 }
 
 section {
-    margin-left: 30px;
+  margin-left: 30px;
 
+}
+
+body{
+  width: 80%;
+  height: 100%;
+  margin-top: 80px;
+  margin-left: 264px;
 }

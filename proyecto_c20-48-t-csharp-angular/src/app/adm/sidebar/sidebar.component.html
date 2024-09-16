@@ -4,18 +4,21 @@
     <div class="button-group">
       <ul>
         <li>
-          <button class="boton-menu boton-categoria" routerLink="/gestion-usuario"><img class="imagen-perfil"
-              src="../../../assets/image/home.png">Inicio</button>
+          <button class="boton-menu boton-categoria" routerLink="/gestion-usuario"><fa-icon [icon]="faHome"></fa-icon> Inicio</button>
         </li>
-        
-        <li><button class="boton-menu boton-categoria" routerLink="/virtual-computers"><img class="imagen-perfil"
-              src="../../../assets/image/tareas.png">Administrar materias</button>
+
+        <li><button class="boton-menu boton-categoria" routerLink="/virtual-computers"><i
+              class="fa-solid fa-folder-open"></i> Administrar materias</button>
         </li>
-        <li><button class="boton-menu boton-categoria" routerLink="/gestion-usuario"><img class="imagen-perfil"
-          src="../../../assets/image/usuario-sinfondo.png">Gestion usuario</button></li>
-        <li><button class="boton-menu boton-categoria" routerLink="/add-educational-notification"><img
-              class="imagen-perfil" src="../../../assets/image/administrar-divisor.png">Administrar
+        <li><button class="boton-menu boton-categoria" routerLink="/gestion-usuario">
+            <fa-icon [icon]="faUser"></fa-icon> Gestion usuario
+          </button></li>
+        <li><button class="boton-menu boton-categoria" routerLink="/add-educational-notification">
+            <i class="fa-solid fa-users"></i> Administrar
             división</button></li>
+        <button class="boton-cerrar boton-categoria" routerLink="/">
+          <fa-icon [icon]="faSignOutAlt"></fa-icon> Cerrar Sesión
+        </button>
 
 
       </ul>
