@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { faBars, faHome, faUser, faCalendar, faHistory, faTasks, faSignOutAlt, faUsers } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-sidebar',
@@ -21,7 +22,9 @@ export class SidebarComponent {
   ngOnInit(): void {
   }
 
-
+  faHome = faHome;
+  faUser = faUser;
+  faSignOutAlt = faSignOutAlt;
 
   // Datos de ejemplo para la gestión de usuarios
   usuarios = [
