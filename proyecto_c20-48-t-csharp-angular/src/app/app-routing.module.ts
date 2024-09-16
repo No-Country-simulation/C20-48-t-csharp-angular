@@ -26,6 +26,7 @@ import { TareasProfesorComponent } from './pages/tareas-profesor/tareas-profesor
 import { HeaderAdministradorComponent } from './adm/header-administrador/header-administrador.component';
 import { MateriasComponent } from './pages/materias/materias.component';
 import { ForoComponent } from './pages/foro/foro.component';
+import { CrearTareaComponent } from './pages/crear-tarea/crear-tarea.component'
 
 const routes: Routes = [
   { path: '', component: LoginFormComponent },
@@ -52,6 +53,7 @@ const routes: Routes = [
   { path: 'foro-profesor', component: ForoProfesorComponent },
   { path: 'tareas-profesor', component: TareasProfesorComponent },
   { path: 'header-administrador', component: HeaderAdministradorComponent },
+  { path: 'crear-tarea', component: CrearTareaComponent},
 
   {path: 'materias' , component: MateriasComponent},
   {path: 'foro' , component: ForoComponent}

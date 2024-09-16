@@ -3,15 +3,15 @@ h2 {
   font-weight: 600;
   font-size: 32px;
   line-height: 37.5px;
-  margin-top: 33px;
-  margin-bottom: 33px;
+  height: 23px;
+  margin-bottom: 13px;
 }
 
 .login {
   border-radius: 50px;
   background-color: rgba(255, 255, 255, 0.88);
   padding: 20px;
-  width: 300px;
+  width: 350px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -21,10 +21,15 @@ h2 {
   gap: 16px;
 }
 
+.class-cloud{
+  width: 121px;
+  height: 88px;
+}
+
 .input-container {
   display: flex;
   align-items: center;
-  width: 100%;
+  width: 90%;
   position: relative;
 }
 
@@ -41,7 +46,7 @@ input[type="password"] {
   flex: 1;
   border-radius: 50px;
   border: 1px solid #ccc;
-  font-size: 20px;
+  font-size: 16px;
   font-family: roboto;
   font-weight: 300;
   line-height: 23.44px;
