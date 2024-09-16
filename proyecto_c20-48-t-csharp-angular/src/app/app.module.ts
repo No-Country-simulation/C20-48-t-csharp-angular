@@ -52,6 +52,7 @@ import { HeaderAdministradorComponent } from './adm/header-administrador/header-
 import { MateriasComponent } from './pages/materias/materias.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ForoComponent } from './pages/foro/foro.component';
+import { CrearTareaComponent } from './pages/crear-tarea/crear-tarea.component';
 
 @NgModule({
   declarations: [
@@ -89,7 +90,8 @@ import { ForoComponent } from './pages/foro/foro.component';
     TareasProfesorComponent,
     HeaderAdministradorComponent,
     MateriasComponent,
-    ForoComponent
+    ForoComponent,
+    CrearTareaComponent
   ],
   imports: [
     BrowserModule,

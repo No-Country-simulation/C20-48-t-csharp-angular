@@ -1,19 +1,19 @@
 .menu {
-    width: 250px;
-    height: 1125px;
+    width: 135px;
     position: fixed;
     display: flex;
     flex-direction: column;
     padding-top: 34px;
     padding-bottom: 100%;
     gap: .5rem;
-    top: 36px;
+    top: 66px;
     left: 0;
-    background-color: #003366;
+    background-color:  #003366;
     z-index: 3;
 }
 
 .boton-menu {
+    font-family: "Poppins", sans-serif;
     background-color: transparent;
     border: 0;
     color: #fff;
@@ -21,13 +21,10 @@
     display: flex;
     text-align: left;
     gap: 1rem;
-    top: 0;
-    left: 0;
     font-weight: 600;
-    padding: 1rem;
+    padding: .5rem;
     font-size: .85rem;
     width: 100%;
-    height: auto;
 }
 
 .boton-menu:hover {
@@ -41,11 +38,26 @@ ul {
     list-style-type: none;
 }
 
+.boton-cerrar {
+    font-family: "Poppins", sans-serif;
+    background-color: transparent;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    text-align: left;
+    gap: 1rem;
+    font-weight: 600;
+    padding: 1rem;
+    margin-top: 130%;
+    font-size: .85rem;
+    width: 100%;
+}
 
-.boton-menu {
+/* .boton-menu {
     width: 24px;
     height: 24px;
     border: 2px;
     color: #ffffff;
 
-}
+} */

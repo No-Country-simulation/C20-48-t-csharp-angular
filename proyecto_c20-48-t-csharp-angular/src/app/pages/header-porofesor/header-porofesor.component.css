@@ -1,22 +1,27 @@
-h1 {
-    text-align: right;
-    color: rgba(255, 255, 255, 1);
-    width: 100%;
-    height: 60px;
-    display: flex;
-    align-items: end;
-    justify-content: right;
-    font-size: 34px;
-    background-color: #003366;;
-  }
-  
-  .llaveImg{
-    width: 25px;
-    height: 25px;  
-    display: inline-block;
-    margin-bottom: 6px;
-    margin-left: 10px;
-  }
+nav { 
+  height: 66px;
+  width: 100%;
+  position: fixed;
+  padding: 10px;
+  top: 0;
+  left: 0;
+  background: #003366;
+  z-index: 2;
+}
+
+.logo{
+  text-align: end;
+  margin-right: 20px;
+}
+
+h1{
+  color: #fff;
+  font-family: "Style Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: xx-large;
+  margin-bottom: 20px;
+}
 
   /* nav {
     height: 66px;
@@ -28,8 +33,8 @@ h1 {
     left: 0;
     background: #003366;
 
-}
-
+} */
+/* 
 h1 {
     color: #fff;
     font-size: xx-large;

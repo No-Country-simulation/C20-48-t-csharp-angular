@@ -5,8 +5,8 @@
 .main {
     width: 60%;
     margin: auto;
-    /* margin-top: 70px; */
-    /* justify-content: center; */
+    margin-top: 70px;
+    justify-content: center;
 }
 
 .main article {
@@ -15,8 +15,9 @@
 
 article {
     width: 849px;
-    height: 602px;
-    /* padding-bottom: 4px; */
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
     margin-bottom: 40px;
     /* margin-left: auto; */
     margin-right: auto;
@@ -26,19 +27,22 @@ article {
     background-color: #fff;
 }
 
-.title {
+.title{
+    font-family: "Poppins", sans-serif;
     width: 200px;
     height: 42px;
-    font-size: 20px;
+    font-size: 18px;
     color: #003366;
     font-weight: 100;
     margin: 15px;
 }
 
 .title p {
-    font-size: 18px;
-    margin-top: 7px;
+    font-weight: 400;
+    font-size: 15px;
+    margin-top: 4px;
 }
+
 
 .search-form {
     position: relative;
@@ -73,7 +77,7 @@ article {
     flex-wrap: wrap;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: center;;
 }
 
 .container-materias .card {
@@ -86,6 +90,8 @@ article {
     text-align: center;
     transition: all 0.25s;
     background-color: #E3E3E3;
+    border: none;
+    cursor: pointer
 }
 
 .container-materias .card:hover {
@@ -96,23 +102,24 @@ article {
 .container-materias .card .materia {
     width: 250px;
     height: 100px;
+    margin-top: 12px;
     background-color: #A3ECF5;
     border-radius: 10px;
     margin: 5px;
     text-align: center;
 }
 
-.container-materias .card .materia h1 {
+.container-materias .card .materia h2 {
     font-weight: 600;
-    padding-top: 50px;
+    padding-top: 30px;
     color: #2f2e2e;
     font-size: 20px;
 }
 
-.container-materias .card h4 {
+/* .container-materias .card h4 {
     font-weight: 600;
     font-size: 20px;
-}
+} */
 
 .container-materias .card p {
     padding: 0 1rem;

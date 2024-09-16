@@ -1,0 +1,56 @@
+<div class="crear-tarea">
+    <div class="task-container">
+        <div class="task-form">
+
+            <!-- Formulario para la tarea -->
+            <form>
+                <div class="form-group">
+                <label for="title">Título</label>
+                <input type="text" id="title" placeholder="Título" />
+                </div>
+        
+                <div class="form-group">
+                <label for="instructions">Instrucciones</label>
+                <textarea id="instructions" placeholder="Instrucciones"></textarea>
+                </div>
+        
+                <div class="form-group">
+                <label for="file">Archivo</label>
+                <input type="file" id="file" />
+                </div>
+        
+                <button type="button" class="btn-create">Crear tarea</button>
+            </form>
+        </div>
+
+        <!-- Panel derecho -->
+        <div class="task-settings">
+            <div class="form-group">
+                <label for="dueDate">Fecha de entrega</label>
+                <select id="dueDate">
+                <option>Sin fecha de entrega</option>
+                <!-- Añadir más opciones según sea necesario -->
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="topic">Tema</label>
+                <select id="topic">
+                <option>Sin tema</option>
+                <!-- Añadir más opciones según sea necesario -->
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="points">Puntos</label>
+                <input type="number" id="points" value="100" />
+            </div>
+
+            <button type="button" class="btn-save">Guardar cambios</button>
+        </div>
+    </div>
+</div>
+
+<app-header-porofesor></app-header-porofesor>
+<app-menu-profesor></app-menu-profesor>
+<app-footer></app-footer>

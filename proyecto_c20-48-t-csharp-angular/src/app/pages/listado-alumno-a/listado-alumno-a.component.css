@@ -89,10 +89,11 @@
   
   /* Centrar la tabla en la página */
   .container {
-    width: 900px;
+    width: 1000px;
     height: auto;
-    margin-top: 20px;
-    margin-left: 130px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 50px;
     display: flex;
   }
   
