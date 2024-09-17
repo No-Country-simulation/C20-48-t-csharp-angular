@@ -1,58 +1,58 @@
 .menu {
-    width: 180px;
-    /* height: 1125px; */
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    padding-top: 34px;
-    padding-bottom: 100%;
-    gap: .5rem;
-    top: 36px;
-    left: 0;
-    background-color: #003366;
-    z-index: 3;
+  width: 130px;
+  /* height: 1125px; */
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  padding-top: 34px;
+  padding-bottom: 100%;
+  gap: .5rem;
+  top: 36px;
+  left: 0;
+  background-color: #003366;
+  z-index: 3;
 }
 
 .boton-menu {
-    font-family: "Poppins", sans-serif;
-    background-color: transparent;
-    border: 0;
-    color: #fff;
-    cursor: pointer;
-    display: flex;
-    text-align: left;
-    gap: 1rem;
-    font-weight: 600;
-    padding: .5rem;
-    font-size: .85rem;
-    width: 100%;
+  font-family: "Poppins", sans-serif;
+  background-color: transparent;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  text-align: left;
+  gap: 1rem;
+  font-weight: 600;
+  padding: .5rem;
+  font-size: .85rem;
+  width: 100%;
 }
 
 .boton-menu:hover {
-    background-color: #0080ff;
-    color: #fff;
-    width: 100%;
-    position: relative;
+  background-color: #0080ff;
+  color: #fff;
+  width: 100%;
+  position: relative;
 }
 
 ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 .boton-cerrar {
-    font-family: "Poppins", sans-serif;
-    background-color: transparent;
-    border: 0;
-    color: #fff;
-    cursor: pointer;
-    display: flex;
-    text-align: left;
-    gap: 1rem;
-    font-weight: 600;
-    padding: 1rem;
-    margin-top: 130%;
-    font-size: .85rem;
-    width: 100%;
+  font-family: "Poppins", sans-serif;
+  background-color: transparent;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  text-align: left;
+  gap: 1rem;
+  font-weight: 600;
+  padding: 1rem;
+  margin-top: 130%;
+  font-size: .85rem;
+  width: 100%;
 }
 
 /* .boton-menu {
@@ -62,4 +62,3 @@ ul {
     color: #ffffff;
 
 } */
-
