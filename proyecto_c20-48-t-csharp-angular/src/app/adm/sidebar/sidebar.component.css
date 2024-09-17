@@ -1,7 +1,7 @@
 
 
 .admin-sidebar {
-  width: 250px;
+  width: 130px;
   /* height: 1125px; */
   position: fixed;
   display: flex;
@@ -26,21 +26,25 @@
   margin-right: 10px;
 }
 
+
 .contenido {
   flex-grow: 1;
   padding: 20px;
 }
 
 .button-group button {
-  display: block;
-  margin-bottom: 10px;
-  background-color: #003366;
-  border:0;
-  width: 171px;
-  height: 43px;
-  font-size: 14px;
-  color: #FFFFFF;
+  font-family: "Poppins", sans-serif;
+  background-color: transparent;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
   text-align: left;
+  gap: 1rem;
+  font-weight: 600;
+  padding: .5rem;
+  font-size: .85rem;
+  width: 100%;
 }
 
 table {
@@ -121,3 +125,5 @@ button {
   font-size: .85rem;
   width: 100%;
 }
+
+
