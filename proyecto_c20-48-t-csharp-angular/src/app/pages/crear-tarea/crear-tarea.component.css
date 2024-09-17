@@ -1,16 +1,16 @@
 .crear-tarea {
     width: 80%;
     height: 580px;
-    margin: auto;
+    margin: 0 auto;
 }
 
 .task-container {
     width: 80%;
     display: flex;
     justify-content: space-between;
-    padding: 20px;
-    margin: auto;
-    margin-top: 100px;
+    padding: 90px;
+    margin: 0 auto;
+    margin-top: 20px;
   }
   
   .task-form {

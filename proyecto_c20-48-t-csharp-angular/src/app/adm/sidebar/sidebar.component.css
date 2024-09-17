@@ -2,7 +2,7 @@
 
 .admin-sidebar {
   width: 250px;
-  height: 1125px;
+  /* height: 1125px; */
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -117,7 +117,7 @@ button {
   gap: 1rem;
   font-weight: 600;
   padding: 1rem;
-  margin-top: 100%;
+  margin-top: 70%;
   font-size: .85rem;
   width: 100%;
 }
